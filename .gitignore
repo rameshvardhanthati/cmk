@@ -1,4 +1,6 @@
-
 # auto generated wildcard
-db/.env
+.env2
 node_modules
+
+# added by cds deploy
+default-env.json
