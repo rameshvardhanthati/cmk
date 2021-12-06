@@ -15,29 +15,199 @@
       "type": "cds.String",
       "length": 1024
     },
-    "app.changemaker.LookupTable": {
-      "kind": "entity",
-      "elements": {
-        "LUV_ID": {
-          "key": true,
-          "type": "app.changemaker.BusinessKey",
-          "length": 10
-        },
-        "LookupName": {
-          "type": "cds.String",
-          "length": 10
-        },
-        "LookupValue": {
-          "type": "cds.String",
-          "length": 50
-        },
-        "DESCRIPTION": {
-          "type": "cds.String",
-          "length": 400
+    "app.changemaker.CompanyType": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.CompanyType",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
         }
-      }
+      ]
     },
-    "app.changemaker.Customer": {
+    "app.changemaker.DocType": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.DocType",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.ReportType": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.ReportType",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.KPIType": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.KPIType",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.ProjectStatus": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.ProjectStatus",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.CustomerStatus": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.CustomerStatus",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.AnticipatedReaction": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.AnticipatedReaction",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.InfluenceLevel": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.InfluenceLevel",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.Attitude": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.Attitude",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.ChangeImpact": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.ChangeImpact",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.GENDER": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.GENDER",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.TITLE": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.TITLE",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.SAPSystem": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.SAPSystem",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.Industry": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.Industry",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.MIMEType": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.MIMEType",
+      "keys": [
+        {
+          "ref": [
+            "KEY_ID"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.Timezone": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "app.changemaker.cmk.common.Timezone",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "app.changemaker.Commons": {
       "kind": "entity",
       "includes": [
         "managed"
@@ -103,21 +273,1081 @@
           "type": "User",
           "length": 255
         },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        }
+      }
+    },
+    "app.changemaker.Location": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "LOC_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "TIMEZONE": {
+          "type": "app.changemaker.Timezone",
+          "target": "app.changemaker.cmk.common.Timezone",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "COUNTRY": {
+          "@title": "{i18n>Country}",
+          "@description": "{i18n>CountryCode.Description}",
+          "type": "Country",
+          "target": "sap.common.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Media": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Med_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "FileName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "FolderPath": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "URL": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "MIMEType": {
+          "type": "app.changemaker.MIMEType",
+          "target": "app.changemaker.cmk.common.MIMEType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Template": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Tem_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "Media": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Document": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Doc_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DocType": {
+          "type": "app.changemaker.DocType",
+          "target": "app.changemaker.cmk.common.DocType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Media": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.BusinessUnit": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "BU_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "BUHead": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Employee",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Address": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "HouseName": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Street1": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "Street2": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "County": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "State": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "ZipCODE": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Country": {
+          "@title": "{i18n>Country}",
+          "@description": "{i18n>CountryCode.Description}",
+          "type": "Country",
+          "target": "sap.common.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "Email": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "PrimaryPhone": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Mobile": {
+          "type": "cds.String",
+          "length": 20
+        }
+      }
+    },
+    "app.changemaker.Company": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "COM_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Type": {
+          "type": "app.changemaker.CompanyType",
+          "target": "app.changemaker.cmk.common.CompanyType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "KeyContact": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Employee",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Employees": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.Employee",
+          "on": [
+            {
+              "ref": [
+                "Employees",
+                "Company"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Customer": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
         "CUST_ID": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
-        "PROJECTS": {
-          "type": "cds.Composition",
+        "UID": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Domain": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Status": {
+          "type": "app.changemaker.CustomerStatus",
+          "target": "app.changemaker.cmk.common.CustomerStatus",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "AdminContact": {
+          "type": "cds.Association",
           "cardinality": {
             "max": 1
+          },
+          "target": "app.changemaker.Employee",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Projects": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
           },
           "target": "app.changemaker.Project",
           "on": [
             {
               "ref": [
-                "PROJECTS",
+                "Projects",
                 "Customer"
               ]
             },
@@ -129,24 +1359,166 @@
             }
           ]
         },
-        "DOMAIN": {
-          "type": "cds.String",
-          "length": 10
+        "BusinessUnits": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.BusinessUnit",
+          "on": [
+            {
+              "ref": [
+                "BusinessUnits",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
         },
-        "UID": {
-          "type": "cds.String",
-          "length": 10
+        "Locations": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.Location",
+          "on": [
+            {
+              "ref": [
+                "Locations",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
         },
-        "NAME": {
-          "type": "cds.String",
-          "length": 50
+        "Industry": {
+          "type": "app.changemaker.Industry",
+          "target": "app.changemaker.cmk.common.Industry",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Logo": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Employees": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.Employee",
+          "on": [
+            {
+              "ref": [
+                "Employees",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "Documents": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.Document",
+          "on": [
+            {
+              "ref": [
+                "Documents",
+                "OWNER"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        },
+        "Templates": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.Template",
+          "on": [
+            {
+              "ref": [
+                "Templates",
+                "OWNER"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
         }
       }
     },
-    "app.changemaker.Project": {
+    "app.changemaker.Employee": {
       "kind": "entity",
       "includes": [
-        "managed"
+        "app.changemaker.Commons"
       ],
       "elements": {
         "createdAt": {
@@ -209,16 +1581,268 @@
           "type": "User",
           "length": 255
         },
-        "PROJ_ID": {
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "EMP_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "FirstName": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "LastName": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "MiddleName": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "MobileNumber": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "DOB": {
+          "type": "cds.Date"
+        },
+        "Gender": {
+          "type": "app.changemaker.GENDER",
+          "target": "app.changemaker.cmk.common.GENDER",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Title": {
+          "type": "app.changemaker.TITLE",
+          "target": "app.changemaker.cmk.common.TITLE",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "IdentityDocument": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "BusinessUnit": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.BusinessUnit",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "BU_ID"
+              ]
+            }
+          ]
+        },
+        "Company": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Project": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Proj_ID": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
         "Customer": {
-          "key": true,
           "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
           "target": "app.changemaker.Customer",
           "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
             {
               "ref": [
                 "CUST_ID"
@@ -226,13 +1850,747 @@
             }
           ]
         },
-        "TITLE": {
+        "Title": {
           "type": "cds.String",
           "length": 12
         },
-        "PURPOSE": {
+        "Purpose": {
           "type": "app.changemaker.LText",
           "length": 1024
+        },
+        "ChangeManager": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Employee",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "SAPSystems": {
+          "type": "app.changemaker.SAPSystem",
+          "target": "app.changemaker.cmk.common.SAPSystem",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "SystemIntegrator": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "OCMPartner": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "Timeframe": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Timeframe",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "TF_ID"
+              ]
+            }
+          ]
+        },
+        "Status": {
+          "type": "app.changemaker.ProjectStatus",
+          "target": "app.changemaker.cmk.common.ProjectStatus",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "KPIs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.KPI",
+          "on": [
+            {
+              "ref": [
+                "KPIs",
+                "Project"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.Timeframe": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "TF_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "StartDate": {
+          "type": "cds.Date"
+        },
+        "EndDate": {
+          "type": "cds.Date"
+        },
+        "Duration": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "app.changemaker.KPI": {
+      "kind": "entity",
+      "includes": [
+        "app.changemaker.Commons"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KPI_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Project": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Project",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Proj_ID"
+              ]
+            }
+          ]
+        },
+        "Type": {
+          "type": "app.changemaker.KPIType",
+          "target": "app.changemaker.cmk.common.KPIType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "TargetPer": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "app.changemaker.cmk.common": {
+      "kind": "context"
+    },
+    "app.changemaker.cmk.common.Timezone": {
+      "kind": "entity",
+      "elements": {
+        "code": {
+          "@title": "{i18n>timezone}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "app.changemaker.cmk.common.Timezone.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "app.changemaker.cmk.common.Timezone.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "app.changemaker.cmk.common.CompanyType": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.DocType": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.ReportType": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.KPIType": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.ProjectStatus": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.CustomerStatus": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.AnticipatedReaction": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.InfluenceLevel": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.Attitude": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.ChangeImpact": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.GENDER": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.TITLE": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.SAPSystem": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.Industry": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "app.changemaker.cmk.common.MIMEType": {
+      "kind": "entity",
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
         }
       }
     },
@@ -310,21 +2668,72 @@
           "type": "User",
           "length": 255
         },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
         "CUST_ID": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
-        "PROJECTS": {
-          "type": "cds.Composition",
+        "UID": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Domain": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Status": {
+          "type": "app.changemaker.CustomerStatus",
+          "target": "app.changemaker.cmk.common.CustomerStatus",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "AdminContact": {
+          "type": "cds.Association",
           "cardinality": {
             "max": 1
+          },
+          "target": "CmkService.LookupTable",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Projects": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
           },
           "target": "CmkService.Project",
           "on": [
             {
               "ref": [
-                "PROJECTS",
+                "Projects",
                 "Customer"
               ]
             },
@@ -336,17 +2745,159 @@
             }
           ]
         },
-        "DOMAIN": {
-          "type": "cds.String",
-          "length": 10
+        "BusinessUnits": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.BusinessUnit",
+          "on": [
+            {
+              "ref": [
+                "BusinessUnits",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
         },
-        "UID": {
-          "type": "cds.String",
-          "length": 10
+        "Locations": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.Location",
+          "on": [
+            {
+              "ref": [
+                "Locations",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
         },
-        "NAME": {
-          "type": "cds.String",
-          "length": 50
+        "Industry": {
+          "type": "app.changemaker.Industry",
+          "target": "app.changemaker.cmk.common.Industry",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Logo": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Employees": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.LookupTable",
+          "on": [
+            {
+              "ref": [
+                "Employees",
+                "Customer"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "Documents": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.Document",
+          "on": [
+            {
+              "ref": [
+                "Documents",
+                "OWNER"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        },
+        "Templates": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.Template",
+          "on": [
+            {
+              "ref": [
+                "Templates",
+                "OWNER"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
         }
       }
     },
@@ -420,16 +2971,32 @@
           "type": "User",
           "length": 255
         },
-        "PROJ_ID": {
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Proj_ID": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
         "Customer": {
-          "key": true,
           "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
           "target": "CmkService.Customer",
           "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
             {
               "ref": [
                 "CUST_ID"
@@ -437,13 +3004,132 @@
             }
           ]
         },
-        "TITLE": {
+        "Title": {
           "type": "cds.String",
           "length": 12
         },
-        "PURPOSE": {
+        "Purpose": {
           "type": "app.changemaker.LText",
           "length": 1024
+        },
+        "ChangeManager": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.LookupTable",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "SAPSystems": {
+          "type": "app.changemaker.SAPSystem",
+          "target": "app.changemaker.cmk.common.SAPSystem",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "SystemIntegrator": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "OCMPartner": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "Timeframe": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Timeframe",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "TF_ID"
+              ]
+            }
+          ]
+        },
+        "Status": {
+          "type": "app.changemaker.ProjectStatus",
+          "target": "app.changemaker.cmk.common.ProjectStatus",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "KPIs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.KPI",
+          "on": [
+            {
+              "ref": [
+                "KPIs",
+                "Project"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
         }
       }
     },
@@ -452,27 +3138,238 @@
       "projection": {
         "from": {
           "ref": [
-            "app.changemaker.LookupTable"
+            "app.changemaker.Employee"
           ]
         }
       },
       "elements": {
-        "LUV_ID": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
-        "LookupName": {
+        "EMP_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
           "type": "cds.String",
           "length": 10
         },
-        "LookupValue": {
+        "FirstName": {
           "type": "cds.String",
-          "length": 50
+          "length": 30
         },
-        "DESCRIPTION": {
+        "LastName": {
           "type": "cds.String",
-          "length": 400
+          "length": 30
+        },
+        "MiddleName": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "MobileNumber": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "DOB": {
+          "type": "cds.Date"
+        },
+        "Gender": {
+          "type": "app.changemaker.GENDER",
+          "target": "app.changemaker.cmk.common.GENDER",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Title": {
+          "type": "app.changemaker.TITLE",
+          "target": "app.changemaker.cmk.common.TITLE",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "IdentityDocument": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "BusinessUnit": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.BusinessUnit",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "BU_ID"
+              ]
+            }
+          ]
+        },
+        "Company": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Company",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "COM_ID"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
         }
       }
     },
@@ -932,6 +3829,36 @@
         }
       }
     },
+    "app.changemaker.cmk.common.Timezone.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>timezone}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        }
+      }
+    },
     "sap.common.Languages.texts": {
       "kind": "entity",
       "@odata.draft.enabled": false,
@@ -1022,6 +3949,798 @@
         "code": {
           "@odata.containment.ignore": true,
           "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "CmkService.BusinessUnit": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.BusinessUnit"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "BU_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "BUHead": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.LookupTable",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Location": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.Location"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "LOC_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "TIMEZONE": {
+          "type": "app.changemaker.Timezone",
+          "target": "app.changemaker.cmk.common.Timezone",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "COUNTRY": {
+          "@title": "{i18n>Country}",
+          "@description": "{i18n>CountryCode.Description}",
+          "type": "Country",
+          "target": "CmkService.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Customer",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "CUST_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Document": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.Document"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Doc_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DocType": {
+          "type": "app.changemaker.DocType",
+          "target": "app.changemaker.cmk.common.DocType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Media": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Template": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.Template"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Tem_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "Media": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Media",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Med_ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.KPI": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.KPI"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KPI_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "Project": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Project",
+          "keys": [
+            {
+              "ref": [
+                "OWNER"
+              ]
+            },
+            {
+              "ref": [
+                "Proj_ID"
+              ]
+            }
+          ]
+        },
+        "Type": {
+          "type": "app.changemaker.KPIType",
+          "target": "app.changemaker.cmk.common.KPIType",
+          "keys": [
+            {
+              "ref": [
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "TargetPer": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "CmkService.Countries": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.common.Countries"
+          ]
+        }
+      },
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "CmkService.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Countries.texts": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "@odata.draft.enabled": false,
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.common.Countries.texts"
+          ]
+        }
+      },
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CountryCode}",
           "@Common.Text": {
             "=": "name"
           },

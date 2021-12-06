@@ -8,6 +8,6 @@ service CmkService {
 	as projection on  changemaker.Project;
 
  entity LookupTable
-	as projection on changemaker.LookupTable;
+	as projection on changemaker.Employee;
 
 }
