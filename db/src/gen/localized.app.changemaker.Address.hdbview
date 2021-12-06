@@ -6,7 +6,7 @@ VIEW localized_app_changemaker_Address AS SELECT
   L.modifiedBy,
   L.VERSION,
   L.OWNER,
-  L.KEY_ID,
+  L.Add_Id,
   L.HouseName,
   L.Street1,
   L.Street2,

@@ -27,7 +27,7 @@ type Timezone : Association to cmk.common.Timezone;
 
 entity Commons : managed {
     VERSION : String(10);
-    KEY OWNER: BusinessKey;
+    OWNER: BusinessKey;
 }
 
 entity Location : managed {
@@ -74,7 +74,7 @@ entity BusinessUnit : Commons {
 
 }
 entity Address : Commons {
-    KEY KEY_ID : BusinessKey;
+    KEY Add_Id : BusinessKey;
         HouseName :	String(20);
         Street1 :	String(40);
         Street2 :	String(40);

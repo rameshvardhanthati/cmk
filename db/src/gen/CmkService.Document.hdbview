@@ -10,10 +10,9 @@ VIEW CmkService_Document AS SELECT
   Document_0.UID,
   Document_0.Name,
   Document_0.DocType_KEY_ID,
-  Document_0.Media_OWNER,
   Document_0.Media_Med_ID
 FROM app_changemaker_Document AS Document_0
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN app_changemaker_cmk_common_DocType AS DocType ON (DocType.KEY_ID = DocType_KEY_ID),
-  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.OWNER = Media_OWNER AND Media.Med_ID = Media_Med_ID)
+  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.Med_ID = Media_Med_ID)
 )

@@ -5,8 +5,8 @@ COLUMN TABLE app_changemaker_Address (
   modifiedAt TIMESTAMP,
   modifiedBy NVARCHAR(255),
   VERSION NVARCHAR(10),
-  OWNER NVARCHAR(10) NOT NULL,
-  KEY_ID NVARCHAR(10) NOT NULL,
+  OWNER NVARCHAR(10),
+  Add_Id NVARCHAR(10) NOT NULL,
   HouseName NVARCHAR(20),
   Street1 NVARCHAR(40),
   Street2 NVARCHAR(40),
@@ -18,7 +18,7 @@ COLUMN TABLE app_changemaker_Address (
   Email NVARCHAR(50),
   PrimaryPhone NVARCHAR(20),
   Mobile NVARCHAR(20),
-  PRIMARY KEY(OWNER, KEY_ID)
+  PRIMARY KEY(Add_Id)
 ) WITH ASSOCIATIONS (
   MANY TO ONE JOIN sap_common_Countries AS Country ON (Country.code = Country_code)
 )

@@ -15,25 +15,20 @@ VIEW localized_CmkService_Employee AS SELECT
   Employee_0.DOB,
   Employee_0.Gender_KEY_ID,
   Employee_0.Title_KEY_ID,
-  Employee_0.IdentityDocument_OWNER,
   Employee_0.IdentityDocument_Med_ID,
-  Employee_0.Address_OWNER,
-  Employee_0.Address_KEY_ID,
+  Employee_0.Address_Add_Id,
   Employee_0.Location_LOC_ID,
-  Employee_0.BusinessUnit_OWNER,
   Employee_0.BusinessUnit_BU_ID,
-  Employee_0.Company_OWNER,
   Employee_0.Company_COM_ID,
-  Employee_0.Customer_OWNER,
   Employee_0.Customer_CUST_ID
 FROM localized_app_changemaker_Employee AS Employee_0
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN CmkService_Gender AS Gender ON (Gender.KEY_ID = Gender_KEY_ID),
   MANY TO ONE JOIN app_changemaker_cmk_common_Title AS Title ON (Title.KEY_ID = Title_KEY_ID),
-  MANY TO ONE JOIN app_changemaker_Media AS IdentityDocument ON (IdentityDocument.OWNER = IdentityDocument_OWNER AND IdentityDocument.Med_ID = IdentityDocument_Med_ID),
-  MANY TO ONE JOIN localized_app_changemaker_Address AS Address ON (Address.OWNER = Address_OWNER AND Address.KEY_ID = Address_KEY_ID),
+  MANY TO ONE JOIN app_changemaker_Media AS IdentityDocument ON (IdentityDocument.Med_ID = IdentityDocument_Med_ID),
+  MANY TO ONE JOIN localized_app_changemaker_Address AS Address ON (Address.Add_Id = Address_Add_Id),
   MANY TO ONE JOIN localized_CmkService_Location AS Location ON (Location.LOC_ID = Location_LOC_ID),
-  MANY TO ONE JOIN localized_CmkService_BusinessUnit AS BusinessUnit ON (BusinessUnit.OWNER = BusinessUnit_OWNER AND BusinessUnit.BU_ID = BusinessUnit_BU_ID),
-  MANY TO ONE JOIN localized_app_changemaker_Company AS Company ON (Company.OWNER = Company_OWNER AND Company.COM_ID = Company_COM_ID),
-  MANY TO ONE JOIN localized_CmkService_Customer AS Customer ON (Customer.OWNER = Customer_OWNER AND Customer.CUST_ID = Customer_CUST_ID)
+  MANY TO ONE JOIN localized_CmkService_BusinessUnit AS BusinessUnit ON (BusinessUnit.BU_ID = BusinessUnit_BU_ID),
+  MANY TO ONE JOIN localized_CmkService_Company AS Company ON (Company.COM_ID = Company_COM_ID),
+  MANY TO ONE JOIN localized_CmkService_Customer AS Customer ON (Customer.CUST_ID = Customer_CUST_ID)
 )

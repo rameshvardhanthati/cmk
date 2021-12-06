@@ -11,15 +11,13 @@ VIEW localized_app_changemaker_Company AS SELECT
   L.Name,
   L.Type_KEY_ID,
   L.Location_LOC_ID,
-  L.Address_OWNER,
-  L.Address_KEY_ID,
-  L.KeyContact_OWNER,
+  L.Address_Add_Id,
   L.KeyContact_EMP_ID
 FROM app_changemaker_Company AS L
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN app_changemaker_cmk_common_CompanyType AS Type ON (Type.KEY_ID = Type_KEY_ID),
   MANY TO ONE JOIN localized_app_changemaker_Location AS Location ON (Location.LOC_ID = Location_LOC_ID),
-  MANY TO ONE JOIN localized_app_changemaker_Address AS Address ON (Address.OWNER = Address_OWNER AND Address.KEY_ID = Address_KEY_ID),
-  MANY TO ONE JOIN localized_app_changemaker_Employee AS KeyContact ON (KeyContact.OWNER = KeyContact_OWNER AND KeyContact.EMP_ID = KeyContact_EMP_ID),
-  MANY TO MANY JOIN localized_app_changemaker_Employee AS Employees ON (Employees.Company_OWNER = OWNER AND Employees.Company_COM_ID = COM_ID)
+  MANY TO ONE JOIN localized_app_changemaker_Address AS Address ON (Address.Add_Id = Address_Add_Id),
+  MANY TO ONE JOIN localized_app_changemaker_Employee AS KeyContact ON (KeyContact.EMP_ID = KeyContact_EMP_ID),
+  MANY TO MANY JOIN localized_app_changemaker_Employee AS Employees ON (Employees.Company_COM_ID = COM_ID)
 )

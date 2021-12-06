@@ -10,9 +10,8 @@ VIEW CmkService_Template AS SELECT
   Template_0.UID,
   Template_0.Name,
   Template_0.Description,
-  Template_0.Media_OWNER,
   Template_0.Media_Med_ID
 FROM app_changemaker_Template AS Template_0
 WITH ASSOCIATIONS (
-  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.OWNER = Media_OWNER AND Media.Med_ID = Media_Med_ID)
+  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.Med_ID = Media_Med_ID)
 )

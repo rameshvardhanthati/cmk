@@ -9,11 +9,10 @@ VIEW localized_app_changemaker_Location AS SELECT
   L.City,
   L.TIMEZONE_code,
   L.COUNTRY_code,
-  L.Customer_OWNER,
   L.Customer_CUST_ID
 FROM app_changemaker_Location AS L
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN localized_app_changemaker_cmk_common_Timezone AS "TIMEZONE" ON ("TIMEZONE".code = TIMEZONE_code),
   MANY TO ONE JOIN localized_sap_common_Countries AS COUNTRY ON (COUNTRY.code = COUNTRY_code),
-  MANY TO ONE JOIN localized_app_changemaker_Customer AS Customer ON (Customer.OWNER = Customer_OWNER AND Customer.CUST_ID = Customer_CUST_ID)
+  MANY TO ONE JOIN localized_app_changemaker_Customer AS Customer ON (Customer.CUST_ID = Customer_CUST_ID)
 )

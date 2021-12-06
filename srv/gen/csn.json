@@ -278,7 +278,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         }
@@ -396,11 +395,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "CUST_ID"
               ]
             }
@@ -479,7 +473,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -588,7 +581,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -616,11 +608,6 @@
           },
           "target": "app.changemaker.Media",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Med_ID"
@@ -701,7 +688,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -736,11 +722,6 @@
           },
           "target": "app.changemaker.Media",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Med_ID"
@@ -821,7 +802,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -857,12 +837,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -874,11 +849,6 @@
           },
           "target": "app.changemaker.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -893,11 +863,6 @@
           },
           "target": "app.changemaker.Customer",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "CUST_ID"
@@ -978,11 +943,10 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
-        "KEY_ID": {
+        "Add_Id": {
           "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
@@ -1113,7 +1077,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -1164,12 +1127,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -1181,11 +1139,6 @@
           },
           "target": "app.changemaker.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -1287,7 +1240,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -1326,11 +1278,6 @@
           },
           "target": "app.changemaker.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -1421,11 +1368,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "Med_ID"
               ]
             }
@@ -1440,12 +1382,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -1586,7 +1523,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -1649,11 +1585,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "Med_ID"
               ]
             }
@@ -1668,12 +1599,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -1701,11 +1627,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "BU_ID"
               ]
             }
@@ -1720,11 +1641,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "COM_ID"
               ]
             }
@@ -1737,11 +1653,6 @@
           },
           "target": "app.changemaker.Customer",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "CUST_ID"
@@ -1822,7 +1733,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -1838,11 +1748,6 @@
           },
           "target": "app.changemaker.Customer",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "CUST_ID"
@@ -1865,11 +1770,6 @@
           },
           "target": "app.changemaker.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -1897,11 +1797,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "COM_ID"
               ]
             }
@@ -1916,11 +1811,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "COM_ID"
               ]
             }
@@ -1933,11 +1823,6 @@
           },
           "target": "app.changemaker.Timeframe",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "TF_ID"
@@ -2050,7 +1935,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -2141,7 +2025,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -2157,11 +2040,6 @@
           },
           "target": "app.changemaker.Project",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Proj_ID"
@@ -2673,7 +2551,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -2712,11 +2589,6 @@
           },
           "target": "CmkService.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -2807,11 +2679,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "Med_ID"
               ]
             }
@@ -2826,12 +2693,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -2976,7 +2838,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -2992,11 +2853,6 @@
           },
           "target": "CmkService.Customer",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "CUST_ID"
@@ -3021,11 +2877,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "EMP_ID"
               ]
             }
@@ -3047,13 +2898,8 @@
           "cardinality": {
             "max": 1
           },
-          "target": "app.changemaker.Company",
+          "target": "CmkService.Company",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "COM_ID"
@@ -3066,13 +2912,8 @@
           "cardinality": {
             "max": 1
           },
-          "target": "app.changemaker.Company",
+          "target": "CmkService.Company",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "COM_ID"
@@ -3087,11 +2928,6 @@
           },
           "target": "app.changemaker.Timeframe",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "TF_ID"
@@ -3208,7 +3044,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -3271,11 +3106,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "Med_ID"
               ]
             }
@@ -3290,12 +3120,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -3323,11 +3148,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "BU_ID"
               ]
             }
@@ -3338,13 +3158,8 @@
           "cardinality": {
             "max": 1
           },
-          "target": "app.changemaker.Company",
+          "target": "CmkService.Company",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "COM_ID"
@@ -3361,12 +3176,174 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
+                "CUST_ID"
               ]
-            },
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Company": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.Company"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "VERSION": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "OWNER": {
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "COM_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Type": {
+          "type": "app.changemaker.CompanyType",
+          "target": "app.changemaker.cmk.common.CompanyType",
+          "keys": [
             {
               "ref": [
-                "CUST_ID"
+                "KEY_ID"
+              ]
+            }
+          ]
+        },
+        "Location": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Location",
+          "keys": [
+            {
+              "ref": [
+                "LOC_ID"
+              ]
+            }
+          ]
+        },
+        "Address": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "app.changemaker.Address",
+          "keys": [
+            {
+              "ref": [
+                "Add_Id"
+              ]
+            }
+          ]
+        },
+        "KeyContact": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Employee",
+          "keys": [
+            {
+              "ref": [
+                "EMP_ID"
+              ]
+            }
+          ]
+        },
+        "Employees": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CmkService.Employee",
+          "on": [
+            {
+              "ref": [
+                "Employees",
+                "Company"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
               ]
             }
           ]
@@ -4121,7 +4098,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -4157,12 +4133,7 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
-                "KEY_ID"
+                "Add_Id"
               ]
             }
           ]
@@ -4174,11 +4145,6 @@
           },
           "target": "CmkService.Employee",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "EMP_ID"
@@ -4193,11 +4159,6 @@
           },
           "target": "CmkService.Customer",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "CUST_ID"
@@ -4324,11 +4285,6 @@
           "keys": [
             {
               "ref": [
-                "OWNER"
-              ]
-            },
-            {
-              "ref": [
                 "CUST_ID"
               ]
             }
@@ -4412,7 +4368,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -4447,11 +4402,6 @@
           },
           "target": "app.changemaker.Media",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Med_ID"
@@ -4537,7 +4487,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -4565,11 +4514,6 @@
           },
           "target": "app.changemaker.Media",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Med_ID"
@@ -4655,7 +4599,6 @@
           "length": 10
         },
         "OWNER": {
-          "key": true,
           "type": "app.changemaker.BusinessKey",
           "length": 10
         },
@@ -4671,11 +4614,6 @@
           },
           "target": "CmkService.Project",
           "keys": [
-            {
-              "ref": [
-                "OWNER"
-              ]
-            },
             {
               "ref": [
                 "Proj_ID"

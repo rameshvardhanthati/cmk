@@ -5,15 +5,14 @@ COLUMN TABLE app_changemaker_Document (
   modifiedAt TIMESTAMP,
   modifiedBy NVARCHAR(255),
   VERSION NVARCHAR(10),
-  OWNER NVARCHAR(10) NOT NULL,
+  OWNER NVARCHAR(10),
   Doc_ID NVARCHAR(10) NOT NULL,
   UID NVARCHAR(10),
   Name NVARCHAR(50),
   DocType_KEY_ID NVARCHAR(10),
-  Media_OWNER NVARCHAR(10),
   Media_Med_ID NVARCHAR(10),
-  PRIMARY KEY(OWNER, Doc_ID)
+  PRIMARY KEY(Doc_ID)
 ) WITH ASSOCIATIONS (
   MANY TO ONE JOIN app_changemaker_cmk_common_DocType AS DocType ON (DocType.KEY_ID = DocType_KEY_ID),
-  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.OWNER = Media_OWNER AND Media.Med_ID = Media_Med_ID)
+  MANY TO ONE JOIN app_changemaker_Media AS Media ON (Media.Med_ID = Media_Med_ID)
 )

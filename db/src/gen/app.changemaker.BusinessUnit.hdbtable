@@ -5,20 +5,17 @@ COLUMN TABLE app_changemaker_BusinessUnit (
   modifiedAt TIMESTAMP,
   modifiedBy NVARCHAR(255),
   VERSION NVARCHAR(10),
-  OWNER NVARCHAR(10) NOT NULL,
+  OWNER NVARCHAR(10),
   BU_ID NVARCHAR(10) NOT NULL,
   UID NVARCHAR(10),
   Location_LOC_ID NVARCHAR(10),
-  Address_OWNER NVARCHAR(10),
-  Address_KEY_ID NVARCHAR(10),
-  BUHead_OWNER NVARCHAR(10),
+  Address_Add_Id NVARCHAR(10),
   BUHead_EMP_ID NVARCHAR(10),
-  Customer_OWNER NVARCHAR(10),
   Customer_CUST_ID NVARCHAR(10),
-  PRIMARY KEY(OWNER, BU_ID)
+  PRIMARY KEY(BU_ID)
 ) WITH ASSOCIATIONS (
   MANY TO ONE JOIN app_changemaker_Location AS Location ON (Location.LOC_ID = Location_LOC_ID),
-  MANY TO ONE JOIN app_changemaker_Address AS Address ON (Address.OWNER = Address_OWNER AND Address.KEY_ID = Address_KEY_ID),
-  MANY TO ONE JOIN app_changemaker_Employee AS BUHead ON (BUHead.OWNER = BUHead_OWNER AND BUHead.EMP_ID = BUHead_EMP_ID),
-  MANY TO ONE JOIN app_changemaker_Customer AS Customer ON (Customer.OWNER = Customer_OWNER AND Customer.CUST_ID = Customer_CUST_ID)
+  MANY TO ONE JOIN app_changemaker_Address AS Address ON (Address.Add_Id = Address_Add_Id),
+  MANY TO ONE JOIN app_changemaker_Employee AS BUHead ON (BUHead.EMP_ID = BUHead_EMP_ID),
+  MANY TO ONE JOIN app_changemaker_Customer AS Customer ON (Customer.CUST_ID = Customer_CUST_ID)
 )
