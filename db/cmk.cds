@@ -17,8 +17,8 @@ type AnticipatedReaction : Association to cmk.common.AnticipatedReaction;
 type InfluenceLevel : Association to cmk.common.InfluenceLevel;
 type Attitude : Association to cmk.common.Attitude;
 type ChangeImpact : Association to cmk.common.ChangeImpact;
-type GENDER : Association to cmk.common.GENDER;
-type TITLE : Association to cmk.common.TITLE;
+type Gender : Association to cmk.common.Gender;
+type Title : Association to cmk.common.Title;
 type SAPSystem : Association to cmk.common.SAPSystem;
 type Industry : Association to cmk.common.Industry;
 type MIMEType : Association to cmk.common.MIMEType;
@@ -125,8 +125,8 @@ entity Employee : Commons {
         MiddleName : String(30);
         MobileNumber : String(20);
         DOB : Date;
-        Gender : GENDER;
-        Title : TITLE;
+        Gender : Gender;
+        Title : Title;
         IdentityDocument : Association to one Media;
         Address	: Association to one Address;
         Location : Association to one Location;
@@ -193,105 +193,105 @@ context cmk.common {
 
     entity CompanyType {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity DocType {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity ReportType {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity KPIType {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity ProjectStatus {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity CustomerStatus {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity AnticipatedReaction {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity InfluenceLevel {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity Attitude {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity ChangeImpact {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
-    entity GENDER {
+    entity Gender {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
-    entity TITLE {
+    entity Title {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity SAPSystem {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity Industry {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };
 
     entity MIMEType {
         key KEY_ID : BusinessKey;
-            KEYNAME: String(10);
+            KEYNAME: String(25);
             VALUE: String(50);
             DESCRIPTION: String(400);
     };

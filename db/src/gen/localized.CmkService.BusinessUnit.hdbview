@@ -19,6 +19,6 @@ FROM localized_app_changemaker_BusinessUnit AS BusinessUnit_0
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN localized_CmkService_Location AS Location ON (Location.LOC_ID = Location_LOC_ID),
   MANY TO ONE JOIN localized_app_changemaker_Address AS Address ON (Address.OWNER = Address_OWNER AND Address.KEY_ID = Address_KEY_ID),
-  MANY TO ONE JOIN localized_CmkService_LookupTable AS BUHead ON (BUHead.OWNER = BUHead_OWNER AND BUHead.EMP_ID = BUHead_EMP_ID),
+  MANY TO ONE JOIN localized_CmkService_Employee AS BUHead ON (BUHead.OWNER = BUHead_OWNER AND BUHead.EMP_ID = BUHead_EMP_ID),
   MANY TO ONE JOIN localized_CmkService_Customer AS Customer ON (Customer.OWNER = Customer_OWNER AND Customer.CUST_ID = Customer_CUST_ID)
 )

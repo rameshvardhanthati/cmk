@@ -7,7 +7,16 @@ service CmkService {
  entity Project
 	as projection on  changemaker.Project;
 
- entity LookupTable
+ entity Employee
 	as projection on changemaker.Employee;
+
+ entity Gender
+	as projection on changemaker.cmk.common.Gender;
+
+ entity ProjectStatus
+	as projection on changemaker.cmk.common.ProjectStatus;
+
+ entity SAPSystem
+	as projection on changemaker.cmk.common.SAPSystem;
 
 }

@@ -135,10 +135,10 @@
         }
       ]
     },
-    "app.changemaker.GENDER": {
+    "app.changemaker.Gender": {
       "kind": "type",
       "type": "cds.Association",
-      "target": "app.changemaker.cmk.common.GENDER",
+      "target": "app.changemaker.cmk.common.Gender",
       "keys": [
         {
           "ref": [
@@ -147,10 +147,10 @@
         }
       ]
     },
-    "app.changemaker.TITLE": {
+    "app.changemaker.Title": {
       "kind": "type",
       "type": "cds.Association",
-      "target": "app.changemaker.cmk.common.TITLE",
+      "target": "app.changemaker.cmk.common.Title",
       "keys": [
         {
           "ref": [
@@ -1619,8 +1619,8 @@
           "type": "cds.Date"
         },
         "Gender": {
-          "type": "app.changemaker.GENDER",
-          "target": "app.changemaker.cmk.common.GENDER",
+          "type": "app.changemaker.Gender",
+          "target": "app.changemaker.cmk.common.Gender",
           "keys": [
             {
               "ref": [
@@ -1630,8 +1630,8 @@
           ]
         },
         "Title": {
-          "type": "app.changemaker.TITLE",
-          "target": "app.changemaker.cmk.common.TITLE",
+          "type": "app.changemaker.Title",
+          "target": "app.changemaker.cmk.common.Title",
           "keys": [
             {
               "ref": [
@@ -2274,7 +2274,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2296,7 +2296,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2318,7 +2318,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2340,7 +2340,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2362,7 +2362,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2384,7 +2384,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2406,7 +2406,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2428,7 +2428,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2450,7 +2450,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2472,7 +2472,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2484,7 +2484,7 @@
         }
       }
     },
-    "app.changemaker.cmk.common.GENDER": {
+    "app.changemaker.cmk.common.Gender": {
       "kind": "entity",
       "elements": {
         "KEY_ID": {
@@ -2494,7 +2494,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2506,7 +2506,7 @@
         }
       }
     },
-    "app.changemaker.cmk.common.TITLE": {
+    "app.changemaker.cmk.common.Title": {
       "kind": "entity",
       "elements": {
         "KEY_ID": {
@@ -2516,7 +2516,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2538,7 +2538,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2560,7 +2560,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2582,7 +2582,7 @@
         },
         "KEYNAME": {
           "type": "cds.String",
-          "length": 10
+          "length": 25
         },
         "VALUE": {
           "type": "cds.String",
@@ -2710,7 +2710,7 @@
           "cardinality": {
             "max": 1
           },
-          "target": "CmkService.LookupTable",
+          "target": "CmkService.Employee",
           "keys": [
             {
               "ref": [
@@ -2841,7 +2841,7 @@
           "cardinality": {
             "max": "*"
           },
-          "target": "CmkService.LookupTable",
+          "target": "CmkService.Employee",
           "on": [
             {
               "ref": [
@@ -3017,7 +3017,7 @@
           "cardinality": {
             "max": 1
           },
-          "target": "CmkService.LookupTable",
+          "target": "CmkService.Employee",
           "keys": [
             {
               "ref": [
@@ -3033,7 +3033,7 @@
         },
         "SAPSystems": {
           "type": "app.changemaker.SAPSystem",
-          "target": "app.changemaker.cmk.common.SAPSystem",
+          "target": "CmkService.SAPSystem",
           "keys": [
             {
               "ref": [
@@ -3101,7 +3101,7 @@
         },
         "Status": {
           "type": "app.changemaker.ProjectStatus",
-          "target": "app.changemaker.cmk.common.ProjectStatus",
+          "target": "CmkService.ProjectStatus",
           "keys": [
             {
               "ref": [
@@ -3133,7 +3133,7 @@
         }
       }
     },
-    "CmkService.LookupTable": {
+    "CmkService.Employee": {
       "kind": "entity",
       "projection": {
         "from": {
@@ -3241,8 +3241,8 @@
           "type": "cds.Date"
         },
         "Gender": {
-          "type": "app.changemaker.GENDER",
-          "target": "app.changemaker.cmk.common.GENDER",
+          "type": "app.changemaker.Gender",
+          "target": "CmkService.Gender",
           "keys": [
             {
               "ref": [
@@ -3252,8 +3252,8 @@
           ]
         },
         "Title": {
-          "type": "app.changemaker.TITLE",
-          "target": "app.changemaker.cmk.common.TITLE",
+          "type": "app.changemaker.Title",
+          "target": "app.changemaker.cmk.common.Title",
           "keys": [
             {
               "ref": [
@@ -3370,6 +3370,93 @@
               ]
             }
           ]
+        }
+      }
+    },
+    "CmkService.Gender": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.cmk.common.Gender"
+          ]
+        }
+      },
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "CmkService.ProjectStatus": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.cmk.common.ProjectStatus"
+          ]
+        }
+      },
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
+        }
+      }
+    },
+    "CmkService.SAPSystem": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.cmk.common.SAPSystem"
+          ]
+        }
+      },
+      "elements": {
+        "KEY_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "KEYNAME": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "DESCRIPTION": {
+          "type": "cds.String",
+          "length": 400
         }
       }
     },
@@ -4085,7 +4172,7 @@
           "cardinality": {
             "max": 1
           },
-          "target": "CmkService.LookupTable",
+          "target": "CmkService.Employee",
           "keys": [
             {
               "ref": [

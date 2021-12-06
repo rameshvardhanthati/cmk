@@ -21,14 +21,14 @@ VIEW CmkService_Customer AS SELECT
 FROM app_changemaker_Customer AS Customer_0
 WITH ASSOCIATIONS (
   MANY TO ONE JOIN app_changemaker_cmk_common_CustomerStatus AS Status ON (Status.KEY_ID = Status_KEY_ID),
-  MANY TO ONE JOIN CmkService_LookupTable AS AdminContact ON (AdminContact.OWNER = AdminContact_OWNER AND AdminContact.EMP_ID = AdminContact_EMP_ID),
+  MANY TO ONE JOIN CmkService_Employee AS AdminContact ON (AdminContact.OWNER = AdminContact_OWNER AND AdminContact.EMP_ID = AdminContact_EMP_ID),
   MANY TO MANY JOIN CmkService_Project AS Projects ON (Projects.Customer_OWNER = OWNER AND Projects.Customer_CUST_ID = CUST_ID),
   MANY TO MANY JOIN CmkService_BusinessUnit AS BusinessUnits ON (BusinessUnits.Customer_OWNER = OWNER AND BusinessUnits.Customer_CUST_ID = CUST_ID),
   MANY TO MANY JOIN CmkService_Location AS Locations ON (Locations.Customer_OWNER = OWNER AND Locations.Customer_CUST_ID = CUST_ID),
   MANY TO ONE JOIN app_changemaker_cmk_common_Industry AS Industry ON (Industry.KEY_ID = Industry_KEY_ID),
   MANY TO ONE JOIN app_changemaker_Media AS Logo ON (Logo.OWNER = Logo_OWNER AND Logo.Med_ID = Logo_Med_ID),
   MANY TO ONE JOIN app_changemaker_Address AS Address ON (Address.OWNER = Address_OWNER AND Address.KEY_ID = Address_KEY_ID),
-  MANY TO MANY JOIN CmkService_LookupTable AS Employees ON (Employees.Customer_OWNER = OWNER AND Employees.Customer_CUST_ID = CUST_ID),
+  MANY TO MANY JOIN CmkService_Employee AS Employees ON (Employees.Customer_OWNER = OWNER AND Employees.Customer_CUST_ID = CUST_ID),
   MANY TO MANY JOIN CmkService_Document AS Documents ON (Documents.OWNER = CUST_ID),
   MANY TO MANY JOIN CmkService_Template AS Templates ON (Templates.OWNER = CUST_ID)
 )
