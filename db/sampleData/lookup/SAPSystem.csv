@@ -1,0 +1,6 @@
+KEY_ID,KEYNAME,VALUE,DESCRIPTION
+SS1,SAPSystem,SAPConcur,SAP Concur
+SS2,SAPSystem,SAPCommerce,SAP Commerce
+SS3,SAPSystem,SAPSF,SAP SuccessFactors
+SS4,SAPSystem,SAPAriba,SAP Ariba
+SS5,SAPSystem,Others,Others

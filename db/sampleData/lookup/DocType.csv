@@ -1,0 +1,3 @@
+KEY_ID,KEYNAME,VALUE,DESCRIPTION
+DT1,DocType,EmployeeFeed,Employees upload data feed
+DT2,DocType,Other,Others upload data feed
