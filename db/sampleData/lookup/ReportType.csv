@@ -1,0 +1,4 @@
+KEY_ID,KEYPNAME,VALUE,DESCRIPTION
+RT1,ReportType,PulseSurvey,Pulse Survey of Employees
+RT2,ReportType,ChangeAssessment,Change Assessment upload 
+RT3,ReportType,Others,Others upload data feed

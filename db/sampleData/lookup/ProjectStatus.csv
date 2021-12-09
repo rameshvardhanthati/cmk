@@ -1,0 +1,9 @@
+KEY_ID,KEYNAME,VALUE,DESCRIPTION
+PS1,ProjectStatus,Discovery,Discovery
+PS2,ProjectStatus,Prepare,Prepare
+PS3,ProjectStatus,Explore,Explore
+PS4,ProjectStatus,Realize,Realize
+PS5,ProjectStatus,Deploy,Deploy
+PS6,ProjectStatus,Run,Run
+PS7,ProjectStatus,Inactive,Inactive
+PS8,ProjectStatus,Closed,Closed

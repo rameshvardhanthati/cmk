@@ -1,0 +1,14 @@
+ADD_ID,HouseName,Street1,Street2,City,County,State,ZipCODE,Country,Email,PrimaryPhone,Mobile
+121,12,Sinatra Drive,Oxley Park,Milton Keynes,Buckinghamshire,MK11AA,England,,0190812345,9876001234
+122,24,Sinatra Drive,Oxley Park,Milton Keynes,Bukcinghamshire,MK11BB,England,,0190812345,9876001234
+123,36,Sinatra Drive,Oxley Park,Milton Keynes,Bukcinghamshire,MK11CC,England,,0190812345,9876001234
+124,48,Sinatra Drive,Oxley Park,Milton Keynes,Bukcinghamshire,MK11DD,England,,0190812345,9876001234
+125,11A,Harlow Crescent,White House,Milton Keynes,Bukcinghamshire,MK11AB,England,,0190812345,9876001234
+126,22B,Harlow Crescent,Oxley Park,Milton Keynes,Bukcinghamshire,MK11AC,England,,0190812345,9876001234
+127,33C,Harlow Crescent,Oxley Park,Milton Keynes,Bukcinghamshire,MK11AD,England,,0190812345,9876001234
+
+
+
+CUST_ID,UID,Name,Domain,Status,AdminContact,Industry,Logo,Address
+
+EMP_ID,UID,FirstName,LastName,MiddleName,MobileNumber,DOB,Gender,Title,IdentityDocument,Address,Location,BusinessUnit,Company,Customer
