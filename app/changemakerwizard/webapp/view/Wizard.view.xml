@@ -1,0 +1,208 @@
+<mvc:View
+    controllerName="com.sap.changemaker.wizard.changemakerwizard.controller.Wizard"
+    xmlns:valuehelpdialog="sap.ui.comp.valuehelpdialog"
+	height="100%"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+>
+	<Shell id="shell">
+		<App id="app">
+			<NavContainer id="wizardNavContainer">
+			<pages>
+				<Page
+                title="New Project"
+				id="wizardContentPage"
+				showHeader="true"
+                >
+					<content>
+						<Wizard id="NewProjectWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+								complete="wizardCompletedHandler">
+							<WizardStep id="CustomerStep"
+										title="Customer"
+										validated="true">
+								<Text class="sapUiSmallMarginBottom"
+										text="Who is the customer for this project?"/>
+                                <form:SimpleForm id="CustomerForm" layout="ResponsiveGridLayout" singleContainerFullSize="false" 
+                                labelSpanXL="4" labelSpanL="6" labelSpanM="6" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2" 
+                                >
+                                    <form:content>
+                                        <Label text="Customer Name" />
+                                    <ComboBox
+                                    items="{
+                                        path:'/SAPSystem'
+                                        }"
+                                    >
+                                    <core:Item key="{VALUE}" text="{DESCRIPTION}" /> 
+                                    </ComboBox>
+                                    <Label id="IndustryLabel" text="Industry" />
+                                    <Input id="CustomerIndustryInput" editable="false" />  
+                                    </form:content>
+                                </form:SimpleForm>
+							</WizardStep>
+							<WizardStep id="ChangeManagementFrameworkStep"
+										validated="true"
+										title="Change Management Framework"
+										>
+								<Text text="What is this project about?"/>
+								<form:SimpleForm layout="ResponsiveGridLayout" singleContainerFullSize="false" 
+                                labelSpanXL="4" labelSpanL="6" labelSpanM="6" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2" 
+										editable="true">
+									<Label text="Title" required="true"/>
+									<Input valueStateText="Enter 6 symbols or more"
+											id="ProductName" 
+											placeholder="Enter project name" />
+									<Label text="Purpose Statement" required="true"/>
+									<Input valueStateText="Enter digits"
+											id="cmgPurposeStatementInput"
+											type="Text" placeholder="Summarize the program and expectations"
+											/>
+									<Label text="Timeframe" required="true" />
+									<DateRangeSelection id="cmfDateRangeSelection" ></DateRangeSelection>
+									<Label text="Location" required="true" />
+									<MultiComboBox id="cmfMultiComboBox" placeholder="Multiple Selection" 
+                                        items="{
+                                            path: 'locationModel>/'
+                                        }"> 
+                                        <core:Item key="{locationModel>name}" text="{locationModel>name}" />
+                                        </MultiComboBox>
+                                    <Label text="SAP System" required="true" ></Label>
+                                    <ComboBox placeholder="Select" ></ComboBox>
+                                    <Label text="System Integrator" ></Label>
+                                    <ComboBox id="cmfcbSystemIntegrator"  ></ComboBox>
+                                    <Label text="OCM Partner" ></Label>
+                                    <MultiInput
+                                        id="multiInput"
+                                        valueHelpOnly="true"
+                                        valueHelpRequest=".onValueHelpRequested"
+                                    ></MultiInput>
+                                    <Label text="Change Manager" required="true" ></Label>
+                                    <Input id="cmfChangeManagerInput" ></Input>
+                                    <Label text="Status" required="true" ></Label>
+                                    <ComboBox id="cmgfcbStatus" ></ComboBox>                                    
+								</form:SimpleForm>
+							</WizardStep>
+							<WizardStep id="ProjectKPIsStep"
+										validated="true"
+										activate="optionalStepActivation"
+										title="Project KPIs">
+								<Text text=" How to measure effectiveness of this project?"/>
+								<Table id="idKPITable"
+                                    inset="false"
+                                    items="{
+                                        path: 'kpiModel>/'
+                                    }">
+                                    <columns>
+                                        <Column
+                                            width="25%">
+                                            <Text text="List of KPIs" />
+                                        </Column>
+                                        <Column
+                                            width="25%">
+                                            <Text text="Target Result" />
+                                        </Column>
+                                    </columns>
+                                    <items>
+                                        <ColumnListItem vAlign="Middle">
+                                            <cells>
+                                                <ObjectIdentifier
+                                                    title="{kpiModel>kpi}"/>
+                                                <Input value="{kpiModel>percent}" description="%" ></Input>                                                    
+                                            </cells>
+                                        </ColumnListItem>
+                                    </items>
+                                </Table>
+							</WizardStep>
+
+						</Wizard>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button text="Cancel" press="handleWizardCancel"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+				<Page id="wizardReviewPage" showHeader="false">
+					<content>
+						<form:SimpleForm
+								title="1. Customer"
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+							<form:content>
+								<Label text="Customer Name"/>
+								<Text id="ProductTypeChosen" text="{/productType}"/>
+                                <Label text="Industry" ></Label>
+								<Link press="editStepOne" text="Edit" />
+							</form:content>
+						</form:SimpleForm>
+
+						<form:SimpleForm
+								title="2. Change Management Framework"
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+							<form:content>
+								<Label text="Title"/>
+								<Text id="ProductNameChosen" text="{/productName}"/>
+								<Label text="Purpose Statement"/>
+								<Text id="ProductWeightChosen" text="{/productWeight}"/>
+								<Label text="Time Frame"/>
+								<Text id="ProductManufacturerChosen" text="{/productManufacturer}"/>
+								<Label text="Location"/>
+								<Text id="ProductDescriptionChosen" text="{/productDescription}"/>
+                                <Label text="SAP System"/>
+								<Text id="SAPSystemChosen" text="{/productDescription}"/>
+                                <Label text="System Integrator"/>
+								<Text id="SystemIntegratorChosen" text="{/productDescription}"/>
+                                <Label text="OCM Partner"/>
+								<Text id="OCMPartnerChosen" text="{/productDescription}"/>
+                                <Label text="Change Manager"/>
+								<Text id="ChangeManagerChosen" text="{/productDescription}"/>
+                                <Label text="Status"/>
+								<Text id="StatusChosen" text="{/productDescription}"/>
+								<Link press="editStepTwo" text="Edit" />
+							</form:content>
+						</form:SimpleForm>
+
+						<form:SimpleForm
+								title="3. Project KPIs"
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+							<form:content>
+								<Label text="Some text"/>
+								<Text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. "/>
+								<Label text="Manufacturing Date"/>
+								<Text id="ManufacturingDate" text="{/manufacturingDate}"/>
+								<Label text="Availability"/>
+								<Text id="AvailabilityChosen" text="{/availabilityType}"/>
+								<Label text="Size"/>
+								<HBox>
+									<Text id="Size" text="{/size}"/>
+									<Text id="Size2" class="sapUiTinyMarginBegin" text="{/measurement}"/>
+								</HBox>
+								<Link press="editStepThree" text="Edit" />
+							</form:content>
+						</form:SimpleForm>
+					</content>
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button text="Submit" press="handleWizardSubmit"/>
+								<Button text="Cancel" press="handleWizardCancel"/>
+							</contentRight>
+						</Bar>
+					</footer>
+				</Page>
+			</pages>
+		</NavContainer>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,1 @@
+using CmkService as service from '../../srv/cmk_srv';
