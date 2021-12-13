@@ -34,10 +34,11 @@
                                         <Label text="Customer Name" />
                                     <ComboBox
                                     items="{
-                                        path:'/SAPSystem'
+                                        path:'/Customer'
                                         }"
+                                    change=".onCustomerChange"
                                     >
-                                    <core:Item key="{VALUE}" text="{DESCRIPTION}" /> 
+                                    <core:Item key="{Domain}" text="{Name}" /> 
                                     </ComboBox>
                                     <Label id="IndustryLabel" text="Industry" />
                                     <Input id="CustomerIndustryInput" editable="false" />  
@@ -71,19 +72,52 @@
                                         <core:Item key="{locationModel>name}" text="{locationModel>name}" />
                                         </MultiComboBox>
                                     <Label text="SAP System" required="true" ></Label>
-                                    <ComboBox placeholder="Select" ></ComboBox>
-                                    <Label text="System Integrator" ></Label>
-                                    <ComboBox id="cmfcbSystemIntegrator"  ></ComboBox>
+                                    <ComboBox id="cbSAPSystem"
+                                    placeholder="Select"
+                                    items="{
+                                        path:'/SAPSystem'
+                                        }"
+                                    change=""
+                                    >
+                                    <core:Item key="{KEY_ID}" text="{DESCRIPTION}" /> 
+                                    </ComboBox>
+                                    <Label id="SystemIntegratorLabel" text="System Integrator" ></Label>
+                                    <ComboBox id="cmfcbSystemIntegrator"
+                                    placeholder="Select System Integrator"
+                                    items="{
+                                        path:'/Company'
+                                        }"
+                                    change=""
+                                    >
+                                    <core:Item key="{COM_ID}" text="{Name}" /> 
+                                    </ComboBox>
                                     <Label text="OCM Partner" ></Label>
-                                    <MultiInput
+                                    <ComboBox id="cmfOCM"
+                                    placeholder="Select OCM Partner"
+                                    items="{
+                                        path:'/Company'
+                                        }"
+                                    change=""
+                                    >
+                                    <core:Item key="{COM_ID}" text="{Name}" /> 
+                                    </ComboBox>
+                                    <!-- <MultiInput
                                         id="multiInput"
                                         valueHelpOnly="true"
                                         valueHelpRequest=".onValueHelpRequested"
-                                    ></MultiInput>
+                                    ></MultiInput> -->
                                     <Label text="Change Manager" required="true" ></Label>
                                     <Input id="cmfChangeManagerInput" ></Input>
                                     <Label text="Status" required="true" ></Label>
-                                    <ComboBox id="cmgfcbStatus" ></ComboBox>                                    
+                                    <ComboBox id="cmgfcbStatus" 
+                                    placeholder="Status"
+                                    items="{
+                                        path:'/ProjectStatus'
+                                        }"
+                                    change=""
+                                    >
+                                    <core:Item key="{KEY_ID}" text="{DESCRIPTION}" /> 
+                                    </ComboBox>                                    
 								</form:SimpleForm>
 							</WizardStep>
 							<WizardStep id="ProjectKPIsStep"
@@ -91,11 +125,19 @@
 										activate="optionalStepActivation"
 										title="Project KPIs">
 								<Text text=" How to measure effectiveness of this project?"/>
-								<Table id="idKPITable"
+								<Table id="KPITable"
                                     inset="false"
                                     items="{
                                         path: 'kpiModel>/'
                                     }">
+                                    <headerToolbar>
+                                        <OverflowToolbar class="sapFDynamicPageAlignContent">
+                                            <content>
+                                                <ToolbarSpacer/>
+                                                <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press="onAdd"/>
+                                            </content>
+                                        </OverflowToolbar>
+                                    </headerToolbar>
                                     <columns>
                                         <Column
                                             width="25%">
@@ -109,15 +151,13 @@
                                     <items>
                                         <ColumnListItem vAlign="Middle">
                                             <cells>
-                                                <ObjectIdentifier
-                                                    title="{kpiModel>kpi}"/>
-                                                <Input value="{kpiModel>percent}" description="%" ></Input>                                                    
+                                                <Input value="{kpiModel>title}" />
+                                                <Input width="12%" value="{kpiModel>percent}" description="%" ></Input>                                                    
                                             </cells>
                                         </ColumnListItem>
                                     </items>
                                 </Table>
 							</WizardStep>
-
 						</Wizard>
 					</content>
 					<footer>
@@ -138,6 +178,7 @@
 								<Label text="Customer Name"/>
 								<Text id="ProductTypeChosen" text="{/productType}"/>
                                 <Label text="Industry" ></Label>
+                                <Text/>
 								<Link press="editStepOne" text="Edit" />
 							</form:content>
 						</form:SimpleForm>
@@ -149,23 +190,23 @@
 								layout="ResponsiveGridLayout">
 							<form:content>
 								<Label text="Title"/>
-								<Text id="ProductNameChosen" text="{/productName}"/>
+								<Text id="ProductNameChosen" text="{reviewModel>}"/>
 								<Label text="Purpose Statement"/>
-								<Text id="ProductWeightChosen" text="{/productWeight}"/>
+								<Text id="ProductWeightChosen" text=""/>
 								<Label text="Time Frame"/>
-								<Text id="ProductManufacturerChosen" text="{/productManufacturer}"/>
+								<Text id="ProductManufacturerChosen" text=""/>
 								<Label text="Location"/>
-								<Text id="ProductDescriptionChosen" text="{/productDescription}"/>
+								<Text id="ProductDescriptionChosen" text=""/>
                                 <Label text="SAP System"/>
-								<Text id="SAPSystemChosen" text="{/productDescription}"/>
+								<Text id="SAPSystemChosen" text=""/>
                                 <Label text="System Integrator"/>
-								<Text id="SystemIntegratorChosen" text="{/productDescription}"/>
+								<Text id="SystemIntegratorChosen" text=""/>
                                 <Label text="OCM Partner"/>
-								<Text id="OCMPartnerChosen" text="{/productDescription}"/>
+								<Text id="OCMPartnerChosen" text=""/>
                                 <Label text="Change Manager"/>
-								<Text id="ChangeManagerChosen" text="{/productDescription}"/>
+								<Text id="ChangeManagerChosen" text=""/>
                                 <Label text="Status"/>
-								<Text id="StatusChosen" text="{/productDescription}"/>
+								<Text id="StatusChosen" text=""/>
 								<Link press="editStepTwo" text="Edit" />
 							</form:content>
 						</form:SimpleForm>
@@ -180,13 +221,13 @@
 								<Text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								tempor incididunt ut labore et dolore magna aliqua. "/>
 								<Label text="Manufacturing Date"/>
-								<Text id="ManufacturingDate" text="{/manufacturingDate}"/>
+								<Text id="ManufacturingDate" text=""/>
 								<Label text="Availability"/>
-								<Text id="AvailabilityChosen" text="{/availabilityType}"/>
+								<Text id="AvailabilityChosen" text=""/>
 								<Label text="Size"/>
 								<HBox>
-									<Text id="Size" text="{/size}"/>
-									<Text id="Size2" class="sapUiTinyMarginBegin" text="{/measurement}"/>
+									<Text id="Size" text=""/>
+									<Text id="Size2" class="sapUiTinyMarginBegin" text=""/>
 								</HBox>
 								<Link press="editStepThree" text="Edit" />
 							</form:content>
