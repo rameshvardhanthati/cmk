@@ -81,6 +81,10 @@
                     "earlyRequests": false,
                     "groupId": "$direct"
                 }
+            },
+            "kpiModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/kpi.json"
             }
         },
         "resources": {

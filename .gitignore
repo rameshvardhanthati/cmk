@@ -3,6 +3,9 @@
 .env1
 .env2
 .env3
+
+.env5
+
 node_modules
 
 db/src/gen
