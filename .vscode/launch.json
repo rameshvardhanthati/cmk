@@ -14,32 +14,6 @@
       ]
     },
     {
-      "name": "Run cmk-1",
-      "request": "launch",
-      "type": "node",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "-n"
-      ],
-      "args": [
-        "--",
-        "cds",
-        "run",
-        "--in-memory?"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "envFile": "${workspaceFolder}/.env4",
-      "env": {
-        "NODE_ENV": "development",
-        "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/cmk\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
-      }
-    },
-    {
       "name": "project2",
       "cwd": "${workspaceFolder}/app/project2",
       "runtimeArgs": [
@@ -89,6 +63,58 @@
         "FIORI_TOOLS_UI5_VERSION": "",
         "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
         "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/cmk\",\"url\":\"https://workspaces-ws-74tlt-app2.us10.trial.applicationstudio.cloud.sap/\",\"client\":\"https://workspaces-ws-74tlt-app2.us10.trial.applicationstudio.cloud.sap/\"}]"
+      }
+    },
+    {
+      "name": "changemakerwizard",
+      "cwd": "${workspaceFolder}/app/changemakerwizard",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/flpSandbox.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "FIORI_TOOLS_UI5_VERSION": "",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ChangeMaker/app/changemakerwizard\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/cmk\",\"url\":\"https://workspaces-ws-gsmqw-app1.eu10.trial.applicationstudio.cloud.sap\"}]"
+      }
+    },
+    {
+      "name": "Run cmk-1",
+      "request": "launch",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-n"
+      ],
+      "args": [
+        "--",
+        "cds",
+        "run",
+        "--in-memory?"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "envFile": "${workspaceFolder}/.env6",
+      "env": {
+        "NODE_ENV": "development",
+        "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/cmk\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
       }
     }
   ]

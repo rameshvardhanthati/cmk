@@ -1,0 +1,5 @@
+CUST_ID,UID,NAME,DOMAIN,STATUS_KEY_ID,ADMINCONTACT_EMP_ID,INDUSTRY_KEY_ID,ADDRESS_ADD_ID,LOGO_MED_ID,empty
+C111,Lufthansa,Lufthansa Airways,Aviation,CS1,E153,,123,,,
+C222,Quantas,Quantas Airways,Aviation,CS1,E157,,125,,
+C333,Shell,Shell Petroleum,Oil & Gas,CS1,E159,,127,,,
+C444,Virgin,VirginTrains, Railways,CS1,E155,,121,,,

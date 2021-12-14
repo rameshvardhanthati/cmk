@@ -36,12 +36,12 @@ modules:
       name: comsapchangemakerwizardchangemakerwizard
       target-path: resources/
     - artifacts:
-      - comtestproject1.zip
-      name: comtestproject1
+      - comchangemakercustomerlistcustomerlist.zip
+      name: comchangemakercustomerlistcustomerlist
       target-path: resources/
     - artifacts:
-      - comwizardproject2.zip
-      name: comwizardproject2
+      - comchangemakerprojectlistprojectlist.zip
+      name: comchangemakerprojectlistprojectlist
       target-path: resources/
 - name: comsapchangemakerwizardchangemakerwizard
   type: html5
@@ -53,9 +53,9 @@ modules:
     - npm install
     - npm run build:cf
     supported-platforms: []
-- name: comtestproject1
+- name: comchangemakercustomerlistcustomerlist
   type: html5
-  path: app/project1
+  path: app/customerlist
   build-parameters:
     build-result: dist
     builder: custom
@@ -63,9 +63,9 @@ modules:
     - npm install
     - npm run build:cf
     supported-platforms: []
-- name: comwizardproject2
+- name: comchangemakerprojectlistprojectlist
   type: html5
-  path: app/project2
+  path: app/projectlist
   build-parameters:
     build-result: dist
     builder: custom

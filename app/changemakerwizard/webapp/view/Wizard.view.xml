@@ -200,7 +200,7 @@
 
 								<Text id="ProductWeightChosen" text="{reviewModel>/purposestatement}"/>
 								<Label text="Time Frame"/>
-								<Text id="ProductManufacturerChosen" text="{reviewModel>/dateRange}"/>
+								<Text id="ProductManufacturerChosen" text="{reviewModel>/date}"/>
 								<Label text="Location"/>
 								<Text id="ProductDescriptionChosen" text="{reviewModel>/location}"/>
                                 <Label text="SAP System"/>
@@ -218,24 +218,12 @@
 						</form:SimpleForm>
 
 						<form:SimpleForm
+                                id="kpiForm"
 								title="3. Project KPIs"
 								minWidth="1024"
 								editable="false"
 								layout="ResponsiveGridLayout">
 							<form:content>
-								<Label text="Some text"/>
-								<Text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. "/>
-								<Label text="Manufacturing Date"/>
-								<Text id="ManufacturingDate" text=""/>
-								<Label text="Availability"/>
-								<Text id="AvailabilityChosen" text=""/>
-								<Label text="Size"/>
-								<HBox>
-									<Text id="Size" text=""/>
-									<Text id="Size2" class="sapUiTinyMarginBegin" text=""/>
-								</HBox>
-								<Link press="editStepThree" text="Edit" />
 							</form:content>
 						</form:SimpleForm>
 					</content>

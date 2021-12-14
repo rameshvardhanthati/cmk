@@ -2,4 +2,4 @@ KEY_ID,KEYNAME,VALUE,DESCRIPTION
 KT1,KPIType,AdoptionRate, Adoption Rate of the Project Change.
 KT2,KPIType,EmployeeReadiness, Employee Readiness for the Project/Org change
 KT3,KPIType,LearningCompetency, Learning Competency
-KT4.KPIType,EmployeeSentiment, E Sentiment
+KT4,KPIType,EmployeeSentiment, E Sentiment

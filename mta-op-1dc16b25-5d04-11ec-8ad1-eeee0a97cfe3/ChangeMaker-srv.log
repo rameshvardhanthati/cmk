@@ -1,0 +1,484 @@
+#2.0#2021 12 14 17:36:29.877#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:00 UTC 2021] Added process: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.877#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:00 UTC 2021] Created app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:00 UTC 2021] Updating process: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:00 UTC 2021] Scaling process: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:01 UTC 2021] Updated app with guid a5fef04c-4247-4cc5-9848-053981e692a2 ({"route"=>"af758bdc-e632-4693-841d-b51420ba4a16", :verb=>"add", :relation=>"routes", :related_guid=>"af758bdc-e632-4693-841d-b51420ba4a16"}) (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:01 UTC 2021] Updated app with guid a5fef04c-4247-4cc5-9848-053981e692a2 ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:04 UTC 2021] Updated app with guid a5fef04c-4247-4cc5-9848-053981e692a2 ({"metadata"=>{"annotations"=>{"mta_id"=>"ChangeMaker", "mta_version"=>"1.0.0", "mta_module"=>"{\"name\":\"ChangeMaker-srv\"}", "mta_module_provided_dependencies"=>"[]", "mta_bound_services"=>"[\"ChangeMaker-db\"]"}, "labels"=>{"mta_id"=>"40d53434d53d57ddba4803d53222039e"}}}) (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:06 UTC 2021] Uploading app package for app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:06 UTC 2021] Updated app with guid a5fef04c-4247-4cc5-9848-053981e692a2 ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:19 UTC 2021] Scaling process: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:20 UTC 2021] Creating build for app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:20 UTC 2021] Downloading nodejs_buildpack... (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:20 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 creating container for instance 0fe7b4b9-3245-4fc5-816f-03c06e337f04 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:20 UTC 2021] Downloaded nodejs_buildpack (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:21 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 successfully created container for instance 0fe7b4b9-3245-4fc5-816f-03c06e337f04 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:21 UTC 2021] Downloading app package... (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021] Downloaded app package (12.6K) (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021]        engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021]        engines.node (package.json): unspecified (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021] -----> Installing binaries (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021] -----> Nodejs Buildpack version 1.7.63 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021]        Copy [/tmp/buildpacks/b5d6a61786998958022dd900561c3bef/dependencies/b1672274bee4660a04596e3593464719/node_16.11.1_linux_x64_cflinuxfs3_beefe428.tgz] (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021] -----> Installing node 16.11.1 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:22 UTC 2021]        [31;1m**WARNING**[0m Node version not specified in package.json or .nvmrc. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021] -----> Installing yarn 1.22.17 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        Using default npm version: 8.0.0 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        Copy [/tmp/buildpacks/b5d6a61786998958022dd900561c3bef/dependencies/4984aeaaf5967be21b1e442d431a1957/yarn_1.22.17_linux_noarch_any-stack_08892f64.tgz] (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021] -----> Creating runtime environment (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        Installed yarn 1.22.17 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NODE_ENV=production (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        [31;1m**WARNING**[0m No package.json found (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        Skipping (no package.json) (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021] -----> Building dependencies (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NODE_VERBOSE=false (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NODE_MODULES_CACHE=true (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:24 UTC 2021]        NODE_HOME=/tmp/contents1239900987/deps/0/node (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:25 UTC 2021]        [31;1m**WARNING**[0m No package.json found (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:25 UTC 2021]        See: https://docs.cloudfoundry.org/buildpacks/node/node-tips.html#start (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:25 UTC 2021]        [31;1m**WARNING**[0m This app may not specify any way to start a node process (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:29.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10959###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:25 UTC 2021]        Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Uploading droplet... (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Uploading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Exit status 0 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Uploaded build artifacts cache (218B) (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:32 UTC 2021] Creating droplet for app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:36 UTC 2021] Uploaded droplet (33.4M) (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:36 UTC 2021] Uploading complete (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:36 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 destroying container for instance 0fe7b4b9-3245-4fc5-816f-03c06e337f04 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:36 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 stopping instance 0fe7b4b9-3245-4fc5-816f-03c06e337f04 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:39.819#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10618###
+[PollStageAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:38 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 successfully destroyed container for instance 0fe7b4b9-3245-4fc5-816f-03c06e337f04 (STDOUT, STG)#
+
+#2.0#2021 12 14 17:36:50.187#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:39 UTC 2021] Updated app with guid a5fef04c-4247-4cc5-9848-053981e692a2 ({:droplet_guid=>"57091053-ead2-4874-9598-53d1cd48e8be"}) (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:40 UTC 2021] Creating revision for app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:40 UTC 2021] Starting app with guid a5fef04c-4247-4cc5-9848-053981e692a2 (STDOUT, API)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:41 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 creating container for instance a1dcb7d1-730c-4eaa-5269-85bf (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:41 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 successfully created container for instance a1dcb7d1-730c-4eaa-5269-85bf (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:42 UTC 2021] Downloading droplet... (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:44 UTC 2021] Starting health monitoring of container (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:44 UTC 2021] Downloaded droplet (33.4M) (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! code ENOENT (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! path /home/vcap/app/package.json (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! syscall open (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! errno -2 (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! enoent This is related to npm not being able to find a file. (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! enoent ENOENT: no such file or directory, open '/home/vcap/app/package.json' (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! enoent  (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR!     /home/vcap/app/.npm/_logs/2021-12-14T17_36_45_235Z-debug.log (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] npm ERR! A complete log of this run can be found in: (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:36:50.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10967###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:45 UTC 2021] Exit status 254 (STDOUT, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:50 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 destroying container for instance a1dcb7d1-730c-4eaa-5269-85bf (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:50 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 stopping instance a1dcb7d1-730c-4eaa-5269-85bf (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:50 UTC 2021] Process has crashed with type: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:51 UTC 2021] App instance exited with guid a5fef04c-4247-4cc5-9848-053981e692a2 payload: {"instance"=>"a1dcb7d1-730c-4eaa-5269-85bf", "index"=>0, "cell_id"=>"70dbd5ee-bbf5-4e14-b207-6b76594c2959", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 254", "crash_count"=>1, "crash_timestamp"=>1639503410957927262, "version"=>"6f17698c-24db-4660-84d3-b8f32aca589d"} (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:51 UTC 2021] Cell 9d4b115f-ea58-43e8-ba55-118dea4fb61d creating container for instance 807918fd-19bb-4eca-4c05-5968 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.487#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:51 UTC 2021] Exit status 137 (STDOUT, PROXY)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:52 UTC 2021] Cell 9d4b115f-ea58-43e8-ba55-118dea4fb61d successfully created container for instance 807918fd-19bb-4eca-4c05-5968 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:52 UTC 2021] Cell 70dbd5ee-bbf5-4e14-b207-6b76594c2959 successfully destroyed container for instance a1dcb7d1-730c-4eaa-5269-85bf (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:52 UTC 2021] Downloading droplet... (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:54 UTC 2021] Starting health monitoring of container (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:54 UTC 2021] Downloaded droplet (33.4M) (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! syscall open (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! code ENOENT (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! errno -2 (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! path /home/vcap/app/package.json (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! enoent  (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! enoent This is related to npm not being able to find a file. (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! enoent ENOENT: no such file or directory, open '/home/vcap/app/package.json' (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR!     /home/vcap/app/.npm/_logs/2021-12-14T17_36_55_344Z-debug.log (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] npm ERR! A complete log of this run can be found in: (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:00.488#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11747###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:36:55 UTC 2021] Exit status 254 (STDOUT, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] Cell 9d4b115f-ea58-43e8-ba55-118dea4fb61d destroying container for instance 807918fd-19bb-4eca-4c05-5968 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] Cell 9d4b115f-ea58-43e8-ba55-118dea4fb61d stopping instance 807918fd-19bb-4eca-4c05-5968 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] Process has crashed with type: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] App instance exited with guid a5fef04c-4247-4cc5-9848-053981e692a2 payload: {"instance"=>"807918fd-19bb-4eca-4c05-5968", "index"=>0, "cell_id"=>"9d4b115f-ea58-43e8-ba55-118dea4fb61d", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 254", "crash_count"=>2, "crash_timestamp"=>1639503421232769372, "version"=>"6f17698c-24db-4660-84d3-b8f32aca589d"} (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] Cell 943208ca-1270-47d3-95bb-b12718f85332 creating container for instance eeb957c6-a1ff-41d2-5d41-1ce6 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:01 UTC 2021] Exit status 137 (STDOUT, PROXY)#
+
+#2.0#2021 12 14 17:37:10.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:02 UTC 2021] Cell 943208ca-1270-47d3-95bb-b12718f85332 successfully created container for instance eeb957c6-a1ff-41d2-5d41-1ce6 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:02 UTC 2021] Cell 9d4b115f-ea58-43e8-ba55-118dea4fb61d successfully destroyed container for instance 807918fd-19bb-4eca-4c05-5968 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:02 UTC 2021] Downloading droplet... (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:04 UTC 2021] Starting health monitoring of container (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:04 UTC 2021] Downloaded droplet (33.4M) (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! code ENOENT (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! errno -2 (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! path /home/vcap/app/package.json (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! syscall open (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! enoent  (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! enoent This is related to npm not being able to find a file. (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! enoent ENOENT: no such file or directory, open '/home/vcap/app/package.json' (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR!     /home/vcap/app/.npm/_logs/2021-12-14T17_37_05_747Z-debug.log (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] npm ERR! A complete log of this run can be found in: (STDERR, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:10.268#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10628###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:05 UTC 2021] Exit status 254 (STDOUT, APP/PROC/WEB)#
+
+#2.0#2021 12 14 17:37:21.253#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:11 UTC 2021] Cell 943208ca-1270-47d3-95bb-b12718f85332 destroying container for instance eeb957c6-a1ff-41d2-5d41-1ce6 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:21.254#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:11 UTC 2021] Cell 943208ca-1270-47d3-95bb-b12718f85332 stopping instance eeb957c6-a1ff-41d2-5d41-1ce6 (STDOUT, CELL)#
+
+#2.0#2021 12 14 17:37:21.254#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:11 UTC 2021] Process has crashed with type: "web" (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:21.254#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:11 UTC 2021] App instance exited with guid a5fef04c-4247-4cc5-9848-053981e692a2 payload: {"instance"=>"eeb957c6-a1ff-41d2-5d41-1ce6", "index"=>0, "cell_id"=>"943208ca-1270-47d3-95bb-b12718f85332", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 254", "crash_count"=>3, "crash_timestamp"=>1639503431566236671, "version"=>"6f17698c-24db-4660-84d3-b8f32aca589d"} (STDOUT, API)#
+
+#2.0#2021 12 14 17:37:21.254#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:11 UTC 2021] Exit status 137 (STDOUT, PROXY)#
+
+#2.0#2021 12 14 17:37:21.254#Z#DEBUG#com.sap.cloud.lm.sl.xs2.1dc16b25-5d04-11ec-8ad1-eeee0a97cfe3.ChangeMaker-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-11754###
+[PollStartAppStatusExecution] [ChangeMaker-srv] a5fef04c-4247-4cc5-9848-053981e692a2 [Tue Dec 14 17:37:12 UTC 2021] Cell 943208ca-1270-47d3-95bb-b12718f85332 successfully destroyed container for instance eeb957c6-a1ff-41d2-5d41-1ce6 (STDOUT, CELL)#
+

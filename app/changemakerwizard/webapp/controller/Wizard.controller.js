@@ -116,24 +116,45 @@ sap.ui.define([
     
             wizardCompletedHandler: function () {
                 //create model
+                let kpiForm = this.getView().byId("kpiForm");
+                kpiForm.destroyContent();
+
                 let customerName = this.getView().byId("cbCustomer").mProperties.value;
                 let industryName = this.getView().byId("cbIndustry").mProperties.value;
                 let productName = this.getView().byId("cbProductName").mProperties.value;
                 let purposeStatement = this.getView().byId("cbPurposeStatement").mProperties.value;
                 let dateRange = this.getView().byId("cmfDateRangeSelection").mProperties.dateValue;
+                console.log(dateRange);
                 let location = this.getView().byId("cmfLocation").mProperties.value;
                 let SAPSystem = this.getView().byId("cbSAPSystem").mProperties.value;
                 let systemIntegrator = this.getView().byId("cbSystemIntegrator").mProperties.value;
                 let OCMPartner = this.getView().byId("cbOCM").mProperties.value;
                 let ChangeManager = this.getView().byId("cmfChangeManager").mProperties.value;
                 let status = this.getView().byId("cmfStatus").mProperties.value;
-                let kpi = this.getView().getModel("kpiModel");
-
-                var data = {name : customerName, industry: industryName, product: productName, purposestatement: purposeStatement, date: dateRange, location: location, SAPsystem: SAPSystem, systemintegrator: systemIntegrator, ocmpartner: OCMPartner, changemanager: ChangeManager, status: status, kpi: kpi};
+                let kpiItems = this.getView().byId("KPITable").getItems();
+                let kpiStorage = [];
+                let kpi = kpiItems.forEach(function(kpi){                  
+                    kpiStorage.push({"title": kpi.mAggregations.cells[0].mProperties.value, "percentage": kpi.mAggregations.cells[1].mProperties.value});
+                }); 
+                var data = {name : customerName, industry: industryName, product: productName, purposestatement: purposeStatement, date: dateRange, location: location, SAPsystem: SAPSystem, systemintegrator: systemIntegrator, ocmpartner: OCMPartner, changemanager: ChangeManager, status: status, kpi: kpiStorage};
                 console.log(data);
                 var oModel = new JSONModel(data); // Only set data here.
-                this.getView().setModel(oModel, "reviewModel"); 
+                this.getView().setModel(oModel, "reviewModel");
+                
+                kpiStorage.forEach(function(data){
+                    var lab = new sap.m.Label();
+                    lab.setText(data.title);
+                    kpiForm.addContent(lab);
+                    var text = new sap.m.Text();
+                    text.setText(data.percentage + " %");
+                    kpiForm.addContent(text);
+                });
+                var editThree = new sap.m.Link();
+                editThree.setText("Edit");
+                editThree.attachPress(this.editStepThree, this);
+                kpiForm.addContent(editThree);
 
+                
                 this._oNavContainer.to(this.byId("wizardReviewPage"));
 
             },
@@ -152,10 +173,6 @@ sap.ui.define([
     
             editStepThree: function () {
                 this._handleNavigationToStep(2);
-            },
-    
-            editStepFour: function () {
-                this._handleNavigationToStep(3);
             },
     
             _handleNavigationToStep: function (iStepNumber) {

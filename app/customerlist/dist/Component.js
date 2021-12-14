@@ -1,0 +1,1 @@
+sap.ui.define(["sap/fe/core/AppComponent"],function(e){"use strict";return e.extend("com.changemaker.customerlist.customerlist.Component",{metadata:{manifest:"json"}})});
