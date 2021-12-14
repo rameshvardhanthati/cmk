@@ -119,7 +119,7 @@ entity Customer : Commons {
 
 entity Employee : Commons {
 	key EMP_ID : BusinessKey;
-        UID	:  String(10);
+        UID	:  String(100);
         FirstName : String(30);
         LastName : String(30);
         MiddleName : String(30);

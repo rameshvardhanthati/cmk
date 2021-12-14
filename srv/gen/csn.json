@@ -1533,7 +1533,7 @@
         },
         "UID": {
           "type": "cds.String",
-          "length": 10
+          "length": 100
         },
         "FirstName": {
           "type": "cds.String",
@@ -2478,6 +2478,131 @@
     },
     "CmkService.Customer": {
       "kind": "entity",
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "CUST_ID",
+          "Value": {
+            "=": "CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "UID",
+          "Value": {
+            "=": "UID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Name",
+          "Value": {
+            "=": "Name"
+          }
+        }
+      ],
+      "@UI.FieldGroup#GeneratedGroup1.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#GeneratedGroup1.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "CUST_ID",
+          "Value": {
+            "=": "CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "UID",
+          "Value": {
+            "=": "UID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Name",
+          "Value": {
+            "=": "Name"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Domain",
+          "Value": {
+            "=": "Domain"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Status_KEY_ID",
+          "Value": {
+            "=": "Status_KEY_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "AdminContact_EMP_ID",
+          "Value": {
+            "=": "AdminContact_EMP_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Industry_KEY_ID",
+          "Value": {
+            "=": "Industry_KEY_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Logo_Med_ID",
+          "Value": {
+            "=": "Logo_Med_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Address_Add_Id",
+          "Value": {
+            "=": "Address_Add_Id"
+          }
+        }
+      ],
+      "@UI.Facets": [
+        {
+          "$Type": "UI.ReferenceFacet",
+          "ID": "GeneratedFacet1",
+          "Label": "General Information",
+          "Target": "@UI.FieldGroup#GeneratedGroup1"
+        }
+      ],
       "projection": {
         "from": {
           "ref": [
@@ -3054,7 +3179,7 @@
         },
         "UID": {
           "type": "cds.String",
-          "length": 10
+          "length": 100
         },
         "FirstName": {
           "type": "cds.String",
