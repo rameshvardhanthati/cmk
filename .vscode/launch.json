@@ -14,58 +14,6 @@
       ]
     },
     {
-      "name": "project2",
-      "cwd": "${workspaceFolder}/app/project2",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/flpSandbox.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "FIORI_TOOLS_UI5_VERSION": "",
-        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/cmk/app/project2\"}",
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/cmk\",\"url\":\"https://workspaces-ws-74tlt-app2.us10.trial.applicationstudio.cloud.sap/\"}]"
-      }
-    },
-    {
-      "name": "changemakerwizard",
-      "cwd": "${workspaceFolder}/app/changemakerwizard",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/flpSandbox.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/cmk/app/changemakerwizard\"}",
-        "FIORI_TOOLS_UI5_VERSION": "",
-        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/cmk\",\"url\":\"https://workspaces-ws-74tlt-app2.us10.trial.applicationstudio.cloud.sap/\",\"client\":\"https://workspaces-ws-74tlt-app2.us10.trial.applicationstudio.cloud.sap/\"}]"
-      }
-    },
-    {
       "name": "changemakerwizard",
       "cwd": "${workspaceFolder}/app/changemakerwizard",
       "runtimeArgs": [

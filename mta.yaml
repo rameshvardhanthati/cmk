@@ -35,37 +35,9 @@ modules:
       - comsapchangemakerwizardchangemakerwizard.zip
       name: comsapchangemakerwizardchangemakerwizard
       target-path: resources/
-    - artifacts:
-      - comtestproject1.zip
-      name: comtestproject1
-      target-path: resources/
-    - artifacts:
-      - comwizardproject2.zip
-      name: comwizardproject2
-      target-path: resources/
 - name: comsapchangemakerwizardchangemakerwizard
   type: html5
   path: app/changemakerwizard
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build:cf
-    supported-platforms: []
-- name: comtestproject1
-  type: html5
-  path: app/project1
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build:cf
-    supported-platforms: []
-- name: comwizardproject2
-  type: html5
-  path: app/project2
   build-parameters:
     build-result: dist
     builder: custom
