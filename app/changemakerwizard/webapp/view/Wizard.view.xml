@@ -33,6 +33,7 @@
                                     <form:content>
                                         <Label text="Customer Name" />
                                     <ComboBox
+                                    id="cbCustomer"
                                     items="{
                                         path:'/Customer'
                                         }"
@@ -41,7 +42,7 @@
                                     <core:Item key="{Domain}" text="{Name}" /> 
                                     </ComboBox>
                                     <Label id="IndustryLabel" text="Industry" />
-                                    <Input id="CustomerIndustryInput" editable="false" />  
+                                    <Input id="cbIndustry" editable="false" />  
                                     </form:content>
                                 </form:SimpleForm>
 							</WizardStep>
@@ -55,17 +56,19 @@
 										editable="true">
 									<Label text="Title" required="true"/>
 									<Input valueStateText="Enter 6 symbols or more"
-											id="ProductName" 
+											id="cbProductName" 
 											placeholder="Enter project name" />
 									<Label text="Purpose Statement" required="true"/>
-									<Input valueStateText="Enter digits"
-											id="cmgPurposeStatementInput"
-											type="Text" placeholder="Summarize the program and expectations"
-											/>
+									<TextArea valueStateText="Enter digits"
+											id="cbPurposeStatement"
+											type="Text" 
+                                            placeholder="Summarize the program and expectations"
+                                            growing="true"/>
+											
 									<Label text="Timeframe" required="true" />
 									<DateRangeSelection id="cmfDateRangeSelection" ></DateRangeSelection>
 									<Label text="Location" required="true" />
-									<MultiComboBox id="cmfMultiComboBox" placeholder="Multiple Selection" 
+									<MultiComboBox id="cmfLocation" placeholder="Multiple Selection" 
                                         items="{
                                             path: 'locationModel>/'
                                         }"> 
@@ -82,7 +85,7 @@
                                     <core:Item key="{KEY_ID}" text="{DESCRIPTION}" /> 
                                     </ComboBox>
                                     <Label id="SystemIntegratorLabel" text="System Integrator" ></Label>
-                                    <ComboBox id="cmfcbSystemIntegrator"
+                                    <ComboBox id="cbSystemIntegrator"
                                     placeholder="Select System Integrator"
                                     items="{
                                         path:'/Company'
@@ -92,7 +95,7 @@
                                     <core:Item key="{COM_ID}" text="{Name}" /> 
                                     </ComboBox>
                                     <Label text="OCM Partner" ></Label>
-                                    <ComboBox id="cmfOCM"
+                                    <ComboBox id="cbOCM"
                                     placeholder="Select OCM Partner"
                                     items="{
                                         path:'/Company'
@@ -107,9 +110,11 @@
                                         valueHelpRequest=".onValueHelpRequested"
                                     ></MultiInput> -->
                                     <Label text="Change Manager" required="true" ></Label>
-                                    <Input id="cmfChangeManagerInput" ></Input>
+                                    <Input id="cmfChangeManager" ></Input>
                                     <Label text="Status" required="true" ></Label>
-                                    <ComboBox id="cmgfcbStatus" 
+                                    <ComboBox id="cmfStatus" 
+                                    selectedKey="PS1"
+                                    enabled="false"                                    
                                     placeholder="Status"
                                     items="{
                                         path:'/ProjectStatus'
@@ -176,9 +181,9 @@
 								layout="ResponsiveGridLayout">
 							<form:content>
 								<Label text="Customer Name"/>
-								<Text id="ProductTypeChosen" text="{/productType}"/>
+								<Text  text="{reviewModel>/name}"/>
                                 <Label text="Industry" ></Label>
-                                <Text/>
+                                <Text text="{reviewModel>/industry}" />
 								<Link press="editStepOne" text="Edit" />
 							</form:content>
 						</form:SimpleForm>
@@ -190,23 +195,24 @@
 								layout="ResponsiveGridLayout">
 							<form:content>
 								<Label text="Title"/>
-								<Text id="ProductNameChosen" text="{reviewModel>}"/>
+								<Text id="ProductNameChosen" text="{reviewModel>/product}"/>
 								<Label text="Purpose Statement"/>
-								<Text id="ProductWeightChosen" text=""/>
+
+								<Text id="ProductWeightChosen" text="{reviewModel>/purposestatement}"/>
 								<Label text="Time Frame"/>
-								<Text id="ProductManufacturerChosen" text=""/>
+								<Text id="ProductManufacturerChosen" text="{reviewModel>/dateRange}"/>
 								<Label text="Location"/>
-								<Text id="ProductDescriptionChosen" text=""/>
+								<Text id="ProductDescriptionChosen" text="{reviewModel>/location}"/>
                                 <Label text="SAP System"/>
-								<Text id="SAPSystemChosen" text=""/>
+								<Text id="SAPSystemChosen" text="{reviewModel>/SAPsystem}"/>
                                 <Label text="System Integrator"/>
-								<Text id="SystemIntegratorChosen" text=""/>
+								<Text id="SystemIntegratorChosen" text="{reviewModel>/systemintegrator}"/>
                                 <Label text="OCM Partner"/>
-								<Text id="OCMPartnerChosen" text=""/>
+								<Text id="OCMPartnerChosen" text="{reviewModel>/ocmpartner}"/>
                                 <Label text="Change Manager"/>
-								<Text id="ChangeManagerChosen" text=""/>
+								<Text id="ChangeManagerChosen" text="{reviewModel>/changemanager}"/>
                                 <Label text="Status"/>
-								<Text id="StatusChosen" text=""/>
+								<Text id="StatusChosen" text="{reviewModel>/status}"/>
 								<Link press="editStepTwo" text="Edit" />
 							</form:content>
 						</form:SimpleForm>

@@ -16,10 +16,7 @@ sap.ui.define([
                 this._oNavContainer = this.byId("wizardNavContainer");
                 this._oWizardContentPage = this.byId("wizardContentPage");
                 var oModel = this.getView().getModel();
-                console.log(oModel);
-
-                
-            
+                console.log(oModel);         
                 // oModel.read('/SAPSystem', {
                 //     success: function(data) {
                 //         console.log(data)
@@ -29,16 +26,14 @@ sap.ui.define([
                 //     }
 
                 // });
-                
-
 			},
 
             onCustomerChange: function(oEvent) {
-                let IndustryLabel = this.getView().byId("CustomerIndustryInput");
-                let SystemIntegratorLabel = this.getView().byId("SystemIntegratorLabel");
+                let IndustryLabel = this.getView().byId("cbIndustry");
+                //let SystemIntegratorLabel = this.getView().byId("SystemIntegratorChosen");
                 var sIndustry = oEvent.oSource.mProperties.selectedKey;
                 IndustryLabel.setValue(sIndustry);
-                SystemIntegratorLabel.setValue(oEvent.mParameters.newValue); 
+                //SystemIntegratorLabel.setValue(oEvent.mParameters.newValue); 
             },
 
             onAdd: function () {
@@ -121,7 +116,23 @@ sap.ui.define([
     
             wizardCompletedHandler: function () {
                 //create model
-                
+                let customerName = this.getView().byId("cbCustomer").mProperties.value;
+                let industryName = this.getView().byId("cbIndustry").mProperties.value;
+                let productName = this.getView().byId("cbProductName").mProperties.value;
+                let purposeStatement = this.getView().byId("cbPurposeStatement").mProperties.value;
+                let dateRange = this.getView().byId("cmfDateRangeSelection").mProperties.dateValue;
+                let location = this.getView().byId("cmfLocation").mProperties.value;
+                let SAPSystem = this.getView().byId("cbSAPSystem").mProperties.value;
+                let systemIntegrator = this.getView().byId("cbSystemIntegrator").mProperties.value;
+                let OCMPartner = this.getView().byId("cbOCM").mProperties.value;
+                let ChangeManager = this.getView().byId("cmfChangeManager").mProperties.value;
+                let status = this.getView().byId("cmfStatus").mProperties.value;
+                let kpi = this.getView().getModel("kpiModel");
+
+                var data = {name : customerName, industry: industryName, product: productName, purposestatement: purposeStatement, date: dateRange, location: location, SAPsystem: SAPSystem, systemintegrator: systemIntegrator, ocmpartner: OCMPartner, changemanager: ChangeManager, status: status, kpi: kpi};
+                console.log(data);
+                var oModel = new JSONModel(data); // Only set data here.
+                this.getView().setModel(oModel, "reviewModel"); 
 
                 this._oNavContainer.to(this.byId("wizardReviewPage"));
 
