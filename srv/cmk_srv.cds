@@ -13,7 +13,10 @@ service CmkService {
 entity Company
 	as projection on changemaker.Company;
 
- entity Gender
+ entity Location
+	as projection on changemaker.Location;
+
+entity Gender
 	as projection on changemaker.cmk.common.Gender;
 
  entity ProjectStatus

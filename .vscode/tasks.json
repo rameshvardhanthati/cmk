@@ -4,31 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "shell",
-      "label": "cds watch",
-      "command": "cds",
-      "args": [
-        "watch"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "label": "cds run",
-      "command": "cds",
-      "args": [
-        "run",
-        "--with-mocks",
-        "--in-memory?"
-      ],
-      "problemMatcher": []
-    },
-    {
-      "label": "cds-deploy-to-hana-ChangeMaker-ChangeMaker-hdiChangeMaker-db-deployer-ws-gsmqw",
+      "label": "cds-deploy-to-hana-cmk-ChangeMaker-hdiChangeMaker-db-deployer-ws-gsmqw",
       "type": "shell",
       "command": "cds",
       "args": [
@@ -38,7 +14,7 @@
         "--no-save"
       ],
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "/home/user/projects/cmk"
       },
       "isBackground": true,
       "problemMatcher": [
@@ -46,13 +22,13 @@
       ]
     },
     {
-      "label": "cds-deploy-to-hana-cmk-cmk-hdiChangeMaker-db-deployer-ws-74tlt",
+      "label": "cds-deploy-to-hana-ChangeMaker-ChangeMaker-hdiChangeMaker-db-deployer-ws-gsmqw",
       "type": "shell",
       "command": "cds",
       "args": [
         "deploy",
         "--to",
-        "hana:cmk-hdiChangeMaker-db-deployer-ws-74tlt",
+        "hana:ChangeMaker-hdiChangeMaker-db-deployer-ws-gsmqw",
         "--no-save"
       ],
       "options": {

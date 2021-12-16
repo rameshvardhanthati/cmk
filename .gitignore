@@ -1,16 +1,5 @@
-
 # auto generated wildcard
-.env1
-.env2
-.env3
+.env4
 
-.env5
-
-node_modules
-
-db/src/gen
-db/.env
-
-.vscode/launch.json
-
-srv/gen
+# added by cds deploy
+default-env.json

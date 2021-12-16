@@ -2478,6 +2478,131 @@
     },
     "CmkService.Customer": {
       "kind": "entity",
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "CUST_ID",
+          "Value": {
+            "=": "CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "UID",
+          "Value": {
+            "=": "UID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Name",
+          "Value": {
+            "=": "Name"
+          }
+        }
+      ],
+      "@UI.FieldGroup#GeneratedGroup1.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#GeneratedGroup1.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "CUST_ID",
+          "Value": {
+            "=": "CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "UID",
+          "Value": {
+            "=": "UID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Name",
+          "Value": {
+            "=": "Name"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Domain",
+          "Value": {
+            "=": "Domain"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Status_KEY_ID",
+          "Value": {
+            "=": "Status_KEY_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "AdminContact_EMP_ID",
+          "Value": {
+            "=": "AdminContact_EMP_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Industry_KEY_ID",
+          "Value": {
+            "=": "Industry_KEY_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Logo_Med_ID",
+          "Value": {
+            "=": "Logo_Med_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Address_Add_Id",
+          "Value": {
+            "=": "Address_Add_Id"
+          }
+        }
+      ],
+      "@UI.Facets": [
+        {
+          "$Type": "UI.ReferenceFacet",
+          "ID": "GeneratedFacet1",
+          "Label": "General Information",
+          "Target": "@UI.FieldGroup#GeneratedGroup1"
+        }
+      ],
       "projection": {
         "from": {
           "ref": [
@@ -2765,6 +2890,138 @@
     },
     "CmkService.Project": {
       "kind": "entity",
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "Proj_ID",
+          "Value": {
+            "=": "Proj_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Customer_CUST_ID",
+          "Value": {
+            "=": "Customer_CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Title",
+          "Value": {
+            "=": "Title"
+          }
+        }
+      ],
+      "@UI.FieldGroup#GeneratedGroup1.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#GeneratedGroup1.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "VERSION",
+          "Value": {
+            "=": "VERSION"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OWNER",
+          "Value": {
+            "=": "OWNER"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Proj_ID",
+          "Value": {
+            "=": "Proj_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Customer_CUST_ID",
+          "Value": {
+            "=": "Customer_CUST_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Title",
+          "Value": {
+            "=": "Title"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Purpose",
+          "Value": {
+            "=": "Purpose"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "ChangeManager_EMP_ID",
+          "Value": {
+            "=": "ChangeManager_EMP_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "SAPSystems_KEY_ID",
+          "Value": {
+            "=": "SAPSystems_KEY_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "SystemIntegrator_COM_ID",
+          "Value": {
+            "=": "SystemIntegrator_COM_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "OCMPartner_COM_ID",
+          "Value": {
+            "=": "OCMPartner_COM_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Timeframe_TF_ID",
+          "Value": {
+            "=": "Timeframe_TF_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Status_KEY_ID",
+          "Value": {
+            "=": "Status_KEY_ID"
+          }
+        }
+      ],
+      "@UI.Facets": [
+        {
+          "$Type": "UI.ReferenceFacet",
+          "ID": "GeneratedFacet1",
+          "Label": "General Information",
+          "Target": "@UI.FieldGroup#GeneratedGroup1"
+        }
+      ],
       "projection": {
         "from": {
           "ref": [
@@ -3344,6 +3601,129 @@
             {
               "ref": [
                 "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CmkService.Location": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "app.changemaker.Location"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "LOC_ID": {
+          "key": true,
+          "type": "app.changemaker.BusinessKey",
+          "length": 10
+        },
+        "UID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "TIMEZONE": {
+          "type": "app.changemaker.Timezone",
+          "target": "app.changemaker.cmk.common.Timezone",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "COUNTRY": {
+          "@title": "{i18n>Country}",
+          "@description": "{i18n>CountryCode.Description}",
+          "type": "Country",
+          "target": "CmkService.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "Customer": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CmkService.Customer",
+          "keys": [
+            {
+              "ref": [
+                "CUST_ID"
               ]
             }
           ]
@@ -4148,130 +4528,6 @@
             {
               "ref": [
                 "EMP_ID"
-              ]
-            }
-          ]
-        },
-        "Customer": {
-          "type": "cds.Association",
-          "cardinality": {
-            "max": 1
-          },
-          "target": "CmkService.Customer",
-          "keys": [
-            {
-              "ref": [
-                "CUST_ID"
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "CmkService.Location": {
-      "kind": "entity",
-      "@cds.autoexposed": true,
-      "projection": {
-        "from": {
-          "ref": [
-            "app.changemaker.Location"
-          ]
-        }
-      },
-      "elements": {
-        "createdAt": {
-          "@cds.on.insert": {
-            "=": "$now"
-          },
-          "@UI.HiddenFilter": true,
-          "@Core.Immutable": true,
-          "@title": "{i18n>CreatedAt}",
-          "@readonly": true,
-          "@odata.on.insert": {
-            "#": "now"
-          },
-          "type": "cds.Timestamp"
-        },
-        "createdBy": {
-          "@cds.on.insert": {
-            "=": "$user"
-          },
-          "@UI.HiddenFilter": true,
-          "@Core.Immutable": true,
-          "@title": "{i18n>CreatedBy}",
-          "@readonly": true,
-          "@odata.on.insert": {
-            "#": "user"
-          },
-          "@description": "{i18n>UserID.Description}",
-          "type": "User",
-          "length": 255
-        },
-        "modifiedAt": {
-          "@cds.on.insert": {
-            "=": "$now"
-          },
-          "@cds.on.update": {
-            "=": "$now"
-          },
-          "@UI.HiddenFilter": true,
-          "@title": "{i18n>ChangedAt}",
-          "@readonly": true,
-          "@odata.on.update": {
-            "#": "now"
-          },
-          "type": "cds.Timestamp"
-        },
-        "modifiedBy": {
-          "@cds.on.insert": {
-            "=": "$user"
-          },
-          "@cds.on.update": {
-            "=": "$user"
-          },
-          "@UI.HiddenFilter": true,
-          "@title": "{i18n>ChangedBy}",
-          "@readonly": true,
-          "@odata.on.update": {
-            "#": "user"
-          },
-          "@description": "{i18n>UserID.Description}",
-          "type": "User",
-          "length": 255
-        },
-        "LOC_ID": {
-          "key": true,
-          "type": "app.changemaker.BusinessKey",
-          "length": 10
-        },
-        "UID": {
-          "type": "cds.String",
-          "length": 10
-        },
-        "City": {
-          "type": "cds.String",
-          "length": 20
-        },
-        "TIMEZONE": {
-          "type": "app.changemaker.Timezone",
-          "target": "app.changemaker.cmk.common.Timezone",
-          "keys": [
-            {
-              "ref": [
-                "code"
-              ]
-            }
-          ]
-        },
-        "COUNTRY": {
-          "@title": "{i18n>Country}",
-          "@description": "{i18n>CountryCode.Description}",
-          "type": "Country",
-          "target": "CmkService.Countries",
-          "keys": [
-            {
-              "ref": [
-                "code"
               ]
             }
           ]
