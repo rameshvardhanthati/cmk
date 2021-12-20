@@ -1,0 +1,76 @@
+{
+	"sap.app": {
+		"id": "my.new.card",
+		"type": "card",
+		"applicationVersion": {
+		  "version": "1.0.0"
+		}
+	},
+	"sap.card": {
+        "type": "Object",
+        "data": {
+            "json": [
+                {
+                    "Name": "Enablement",
+                    "url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                    "icon": "sap-icon://education"
+                },
+                {
+                    "Name": "Glossary",
+                    "url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                    "icon": "sap-icon://alphabetical-order"
+                },
+                {
+                    "Name": "Wiki",
+                    "url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                    "icon": "sap-icon://inspection"
+                }
+            ]
+        },
+        "header": {
+			"icon": {
+				"src": "sap-icon://building"
+			},
+			"title": "Procurement Process Change",
+			"subTitle": "Woolworths"
+            
+        },
+        "content": {
+
+            "actions": [
+                    {
+                        "type": "Navigation",
+                        "url": "{url}"
+                        
+                    }
+            ],
+			"data": {
+				"json": [
+					{
+						"Name": "Enablement",
+                        "url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                        "icon": "sap-icon://education"
+					},
+					{
+						"Name": "Glossary",
+						"url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                        "icon": "sap-icon://alphabetical-order"
+					},
+					{
+						"Name": "Wiki",
+						"url": "https://im.enter.sap/sap/ino/#/idea/61289",
+                        "icon": "sap-icon://inspection"
+					}
+				]
+			},
+			"item": {
+                "icon": {
+                    "src": "{icon}"
+                },
+				"title": {
+					"value": "{Name}"
+				}
+            }
+        }
+	}
+}
